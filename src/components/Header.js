@@ -1,20 +1,33 @@
 import React from 'react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import './Header.css'; // Agregamos el CSS externo
 
 const Header = () => {
   return (
-    <header style={{
-  textAlign: 'center',
-  padding: '40px 10px',
-  backgroundColor: '#006B56',
-  color: 'white',
-  borderBottom: '4px solid #00b894'
-}}>
-  <h1>Pablo Díaz García</h1>
-  <h2>Desarrollador FullStack</h2>
-  <div style={{ marginTop: '20px' }}>
-    <a href="..." target="_blank">LinkedIn</a> | <a href="...">GitHub</a>
-  </div>
-</header>
+    <header className="header">
+      <h1>Pablo Díaz García</h1>
+      <h2>Desarrollador de aplicaciones web (FullStack)</h2>
+
+      <div className="icon-buttons">
+        <a
+          href="https://www.linkedin.com/in/pablo-díaz-garcía-344048350"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="icon-button linkedin"
+        >
+          <FaLinkedin size={32} />
+        </a>
+
+        <a
+          href="https://github.com/PabloDev96"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="icon-button github"
+        >
+          <FaGithub size={32} />
+        </a>
+      </div>
+    </header>
   );
 };
 
