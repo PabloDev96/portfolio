@@ -1,31 +1,35 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './IntroGame.css';
+import naveImg from '../assets/nave.png';
+import marcianoAbout from '../assets/marcianoSobreMi.png';
+import marcianoProjects from '../assets/marcianoProyectos.png';
+import marcianoContact from '../assets/marcianoContacto.png';
 
 export default function IntroGame({ onGameEnd }) {
   const canvasRef = useRef(null);
   const [bullets, setBullets] = useState([]);
   const [explosions, setExplosions] = useState([]);
   const [x, setX] = useState(150);
-
-  const aboutRef = useRef(null);
-  const projectsRef = useRef(null);
-  const contactRef = useRef(null);
+  const naveRef = useRef(null);
 
   const sectionRefs = {
-    about: aboutRef,
-    projects: projectsRef,
-    contact: contactRef,
+    about: useRef(null),
+    projects: useRef(null),
+    contact: useRef(null),
   };
 
   const sections = [
-    { id: 'about', label: 'Sobre mí' },
-    { id: 'projects', label: 'Proyectos' },
-    { id: 'contact', label: 'Contacto' },
+    { id: 'about', label: 'Sobre mí', img: marcianoAbout },
+    { id: 'projects', label: 'Proyectos', img: marcianoProjects },
+    { id: 'contact', label: 'Contacto', img: marcianoContact },
   ];
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
+
+    const nave = new Image();
+    nave.src = naveImg;
 
     let animationId;
     const width = canvas.width;
@@ -33,12 +37,10 @@ export default function IntroGame({ onGameEnd }) {
 
     const draw = () => {
       ctx.clearRect(0, 0, width, height);
-      ctx.fillStyle = '#00b894';
-      ctx.fillRect(x, height - 20, 20, 20); // nave
+      ctx.drawImage(nave, x, height - 40, 40, 40);
 
-      // Dibujar balas
-      ctx.fillStyle = '#fff';
       bullets.forEach((b, i) => {
+        ctx.fillStyle = '#fff';
         ctx.fillRect(b.x, b.y, 4, 10);
         b.y -= 5;
         if (b.y < 0) bullets.splice(i, 1);
@@ -59,12 +61,11 @@ export default function IntroGame({ onGameEnd }) {
           ) {
             bullets.splice(i, 1);
             setExplosions((prev) => [...prev, { x: b.x, y: b.y, frame: 0 }]);
-            setTimeout(() => onGameEnd(s.id), 500); // Pasa el id de la sección
+            setTimeout(() => onGameEnd(s.id), 500);
           }
         });
       });
 
-      // Dibujar explosiones
       explosions.forEach((ex, i) => {
         ctx.fillStyle = `rgba(255, 0, 0, ${1 - ex.frame / 5})`;
         ctx.beginPath();
@@ -85,20 +86,34 @@ export default function IntroGame({ onGameEnd }) {
     const handleKey = (e) => {
       if (e.key === 'ArrowLeft') setX((prev) => Math.max(0, prev - 10));
       if (e.key === 'ArrowRight') setX((prev) => Math.min(280, prev + 10));
-      if (e.key === ' ') setBullets((prev) => [...prev, { x: x + 8, y: 280 }]);
+      if (e.key === ' ') setBullets((prev) => [...prev, { x: x + 18, y: 260 }]);
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
   }, [x]);
 
   return (
-    <div className="intro-game">
-      <canvas ref={canvasRef} width={320} height={300} className="pixel-canvas" />
-      <div className="marcianos">
-        <div key="about" ref={aboutRef} className="marciano">Sobre mí</div>
-        <div key="projects" ref={projectsRef} className="marciano">Proyectos</div>
-        <div key="contact" ref={contactRef} className="marciano">Contacto</div>
-      </div>
+  <div className="intro-game">
+    <canvas ref={canvasRef} width={480} height={420} className="pixel-canvas" />
+    
+    <div className="marcianos">
+      {sections.map((s) => (
+        <img
+          key={s.id}
+          ref={sectionRefs[s.id]}
+          src={s.img}
+          alt={s.label}
+          className="marciano-img"
+        />
+      ))}
+    </div> 
+
+    <div className="game-instructions">
+      <p>→ Mueve la nave con las flechas izquierda/derecha</p>
+      <p>→ Dispara con la barra espaciadora</p>
+      <p>→ Elige una sección disparando a un marciano</p>
     </div>
-  );
+  </div>
+);
 }
+

@@ -24,24 +24,36 @@
   pointer-events: none; /* No bloquea clics */
 }
 
-.marciano {
+.marciano-img {
+  width: 60px;
+  height: auto;
+  image-rendering: pixelated;
+  pointer-events: auto;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.marciano-img:hover {
+  transform: scale(1.1);
+}
+
+.game-instructions {
+  margin-top: 20px;
   font-family: 'PressStart2P', monospace;
   font-size: 8px;
-  background-color: #006B56;
   color: #00b894;
-  padding: 10px;
-  border: 2px solid #00b894;
-  border-radius: 8px;
-  pointer-events: auto; /* Permite recibir colisiones */
-  user-select: none;
   text-align: center;
-  width: 70px;
+  line-height: 1.8;
 }
 
 @media (max-width: 500px) {
-  .marciano {
+  .game-instructions {
     font-size: 6px;
-    padding: 6px;
-    width: 60px;
+  }
+}
+
+@media (max-width: 500px) {
+  .marciano-img {
+    width: 48px;
   }
 }

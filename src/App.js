@@ -6,25 +6,33 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 
 function App() {
-  const [sectionToShow, setSectionToShow] = useState(null);
+  const [section, setSection] = useState('game'); // 'about', 'projects', 'contact'
 
-  const handleGameEnd = (sectionId) => {
-    setSectionToShow(sectionId);
-  };
+  const goToGame = () => setSection('game');
 
   return (
-    <div>
-      {!sectionToShow ? (
-        <IntroGame onGameEnd={handleGameEnd} />
-      ) : (
+    <>
+      {section === 'game' && <IntroGame onGameEnd={setSection} />}
+      {section === 'about' && (
         <>
-          {sectionToShow === 'about' && <Header />}
-          {sectionToShow === 'about' && <About />}
-          {sectionToShow === 'projects' && <Projects />}
-          {sectionToShow === 'contact' && <Contact />}
+          <Header />
+          <About />
+          <button className="back-button" onClick={goToGame}>Volver al juego</button>
         </>
       )}
-    </div>
+      {section === 'projects' && (
+        <>
+          <Projects />
+          <button className="back-button" onClick={goToGame}>Volver al juego</button>
+        </>
+      )}
+      {section === 'contact' && (
+        <>
+          <Contact />
+          <button className="back-button" onClick={goToGame}>Volver al juego</button>
+        </>
+      )}
+    </>
   );
 }
 

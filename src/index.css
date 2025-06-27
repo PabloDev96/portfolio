@@ -18,3 +18,20 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.back-button {
+  margin: 20px auto;
+  display: block;
+  font-family: 'PressStart2P', monospace;
+  background-color: #006B56;
+  color: #00b894;
+  border: 2px solid #00b894;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #00b894;
+  color: #1e1e1e;
+}
