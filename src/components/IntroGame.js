@@ -95,7 +95,7 @@ export default function IntroGame({ onGameEnd }) {
 
   return (
     <div className="intro-game">
-      <canvas ref={canvasRef} width={480} height={420} className="pixel-canvas" />
+      <canvas ref={canvasRef} width={600} height={540} className="pixel-canvas" />
       <div className="marcianos">
         {sections.map((s) => (
           <img
