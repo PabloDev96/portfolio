@@ -1,0 +1,47 @@
+.intro-game {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.pixel-canvas {
+  width: 100%;
+  border: 4px solid #00b894;
+  background-color: #1e1e1e;
+  image-rendering: pixelated;
+  display: block;
+}
+
+.marcianos {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  pointer-events: none; /* No bloquea clics */
+}
+
+.marciano {
+  font-family: 'PressStart2P', monospace;
+  font-size: 8px;
+  background-color: #006B56;
+  color: #00b894;
+  padding: 10px;
+  border: 2px solid #00b894;
+  border-radius: 8px;
+  pointer-events: auto; /* Permite recibir colisiones */
+  user-select: none;
+  text-align: center;
+  width: 70px;
+}
+
+@media (max-width: 500px) {
+  .marciano {
+    font-size: 6px;
+    padding: 6px;
+    width: 60px;
+  }
+}
