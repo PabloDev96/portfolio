@@ -1,3 +1,4 @@
+// IntroGame.js
 import React, { useEffect, useRef, useState } from 'react';
 import './IntroGame.css';
 import naveImg from '../assets/nave.png';
@@ -37,7 +38,7 @@ export default function IntroGame({ onGameEnd }) {
 
     const draw = () => {
       ctx.clearRect(0, 0, width, height);
-      ctx.drawImage(nave, x, height - 40, 40, 40);
+      ctx.drawImage(nave, x, height - 60, 50, 50); // nave más grande
 
       bullets.forEach((b, i) => {
         ctx.fillStyle = '#fff';
@@ -85,35 +86,32 @@ export default function IntroGame({ onGameEnd }) {
   useEffect(() => {
     const handleKey = (e) => {
       if (e.key === 'ArrowLeft') setX((prev) => Math.max(0, prev - 10));
-      if (e.key === 'ArrowRight') setX((prev) => Math.min(280, prev + 10));
-      if (e.key === ' ') setBullets((prev) => [...prev, { x: x + 18, y: 260 }]);
+      if (e.key === 'ArrowRight') setX((prev) => Math.min(430, prev + 10));
+      if (e.key === ' ') setBullets((prev) => [...prev, { x: x + 23, y: 340 }]);
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
   }, [x]);
 
   return (
-  <div className="intro-game">
-    <canvas ref={canvasRef} width={480} height={420} className="pixel-canvas" />
-    
-    <div className="marcianos">
-      {sections.map((s) => (
-        <img
-          key={s.id}
-          ref={sectionRefs[s.id]}
-          src={s.img}
-          alt={s.label}
-          className="marciano-img"
-        />
-      ))}
-    </div> 
-
-    <div className="game-instructions">
-      <p>→ Mueve la nave con las flechas izquierda/derecha</p>
-      <p>→ Dispara con la barra espaciadora</p>
-      <p>→ Elige una sección disparando a un marciano</p>
+    <div className="intro-game">
+      <canvas ref={canvasRef} width={480} height={420} className="pixel-canvas" />
+      <div className="marcianos">
+        {sections.map((s) => (
+          <img
+            key={s.id}
+            ref={sectionRefs[s.id]}
+            src={s.img}
+            alt={s.label}
+            className="marciano-img marciano-large"
+          />
+        ))}
+      </div>
+      <div className="game-instructions">
+        <p>→ Mueve la nave con las flechas izquierda/derecha</p>
+        <p>→ Dispara con la barra espaciadora</p>
+        <p>→ Elige una sección disparando a un marciano</p>
+      </div>
     </div>
-  </div>
-);
+  );
 }
-
