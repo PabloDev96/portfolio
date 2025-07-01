@@ -7,11 +7,17 @@ import marcianoProjects from '../assets/marcianoProyectos.png';
 import marcianoContact from '../assets/marcianoContacto.png';
 
 export default function IntroGame({ onGameEnd }) {
+  const lastCanvasWidthRef = useRef(null);
   const canvasRef = useRef(null);
   const [bullets, setBullets] = useState([]);
   const [explosions, setExplosions] = useState([]);
   const [x, setX] = useState(150);
-  const naveRef = useRef(null);
+  const [spriteSize, setSpriteSize] = useState({
+    shipWidth: 150,
+    shipHeight: 150,
+    alienWidth: 100,
+    alienHeight: 100,
+  });
 
   const sectionRefs = {
     about: useRef(null),
@@ -28,21 +34,50 @@ export default function IntroGame({ onGameEnd }) {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
-
     const nave = new Image();
     nave.src = naveImg;
-
     let animationId;
-    const width = canvas.width;
-    const height = canvas.height;
+
+    const resizeCanvas = () => {
+      const prevWidth = canvas.width || window.innerWidth;
+      canvas.width = window.innerWidth * 0.95;
+      canvas.height = window.innerHeight * 0.8;
+
+      // Reescalar la nave proporcionalmente
+      if (lastCanvasWidthRef.current !== null) {
+        const ratio = canvas.width / lastCanvasWidthRef.current;
+        setX((prevX) => prevX * ratio);
+      }
+      lastCanvasWidthRef.current = canvas.width;
+
+      // Escalado de sprites
+      const baseWidth = canvas.width;
+      const shipW = baseWidth * 0.15;
+      const shipH = shipW;
+      const alienW = baseWidth * 0.12;
+      const alienH = alienW;
+
+      setSpriteSize({
+        shipWidth: shipW,
+        shipHeight: shipH,
+        alienWidth: alienW,
+        alienHeight: alienH,
+      });
+    };
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
     const draw = () => {
+      const width = canvas.width;
+      const height = canvas.height;
+
       ctx.clearRect(0, 0, width, height);
-      ctx.drawImage(nave, x, height - 60, 50, 50); // nave más grande
+      ctx.drawImage(nave, x, height - spriteSize.shipHeight - 30, spriteSize.shipWidth, spriteSize.shipHeight);
 
       bullets.forEach((b, i) => {
         ctx.fillStyle = '#fff';
-        ctx.fillRect(b.x, b.y, 4, 10);
+        ctx.fillRect(b.x, b.y, 6, 20);
         b.y -= 5;
         if (b.y < 0) bullets.splice(i, 1);
 
@@ -50,15 +85,19 @@ export default function IntroGame({ onGameEnd }) {
           const targetRef = sectionRefs[s.id];
           const rect = targetRef.current.getBoundingClientRect();
           const canvasRect = canvas.getBoundingClientRect();
+          const scaleX = canvas.width / canvasRect.width;
+          const scaleY = canvas.height / canvasRect.height;
 
-          const targetX = rect.left - canvasRect.left;
-          const targetY = rect.top - canvasRect.top;
+          const targetX = (rect.left - canvasRect.left) * scaleX;
+          const targetY = (rect.top - canvasRect.top) * scaleY;
+          const targetWidth = rect.width * scaleX;
+          const targetHeight = rect.height * scaleY;
 
           if (
             b.x >= targetX &&
-            b.x <= targetX + rect.width &&
+            b.x <= targetX + targetWidth &&
             b.y >= targetY &&
-            b.y <= targetY + rect.height
+            b.y <= targetY + targetHeight
           ) {
             bullets.splice(i, 1);
             setExplosions((prev) => [...prev, { x: b.x, y: b.y, frame: 0 }]);
@@ -70,7 +109,7 @@ export default function IntroGame({ onGameEnd }) {
       explosions.forEach((ex, i) => {
         ctx.fillStyle = `rgba(255, 0, 0, ${1 - ex.frame / 5})`;
         ctx.beginPath();
-        ctx.arc(ex.x, ex.y, ex.frame * 4, 0, 2 * Math.PI);
+        ctx.arc(ex.x, ex.y, ex.frame * 8, 0, 2 * Math.PI);
         ctx.fill();
         ex.frame++;
         if (ex.frame > 5) explosions.splice(i, 1);
@@ -78,24 +117,44 @@ export default function IntroGame({ onGameEnd }) {
 
       animationId = requestAnimationFrame(draw);
     };
+
     draw();
 
-    return () => cancelAnimationFrame(animationId);
-  }, [bullets, x, explosions, onGameEnd]);
+    return () => {
+      cancelAnimationFrame(animationId);
+      window.removeEventListener('resize', resizeCanvas);
+    };
+  }, [bullets, x, explosions, onGameEnd, spriteSize]);
 
   useEffect(() => {
-    const handleKey = (e) => {
-      if (e.key === 'ArrowLeft') setX((prev) => Math.max(0, prev - 10));
-      if (e.key === 'ArrowRight') setX((prev) => Math.min(430, prev + 10));
-      if (e.key === ' ') setBullets((prev) => [...prev, { x: x + 23, y: 340 }]);
-    };
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
-  }, [x]);
+  const handleKey = (e) => {
+    const canvas = canvasRef.current;
+    const NAV_SPEED = canvas.width * 0.02; // 2% del ancho del canvas
+
+    if (e.key === 'ArrowLeft') {
+      setX((prev) => Math.max(0, prev - NAV_SPEED));
+    }
+    if (e.key === 'ArrowRight') {
+      setX((prev) => Math.min(canvas.width - spriteSize.shipWidth, prev + NAV_SPEED));
+    }
+    if (e.key === ' ') {
+      setBullets((prev) => [
+        ...prev,
+        {
+          x: x + spriteSize.shipWidth / 2,
+          y: canvas.height - spriteSize.shipHeight - 30,
+        },
+      ]);
+    }
+  };
+
+  window.addEventListener('keydown', handleKey);
+  return () => window.removeEventListener('keydown', handleKey);
+}, [x, spriteSize]);
 
   return (
     <div className="intro-game">
-      <canvas ref={canvasRef} width={600} height={540} className="pixel-canvas" />
+      <canvas ref={canvasRef} className="pixel-canvas" />
       <div className="marcianos">
         {sections.map((s) => (
           <img
@@ -103,7 +162,11 @@ export default function IntroGame({ onGameEnd }) {
             ref={sectionRefs[s.id]}
             src={s.img}
             alt={s.label}
-            className="marciano-img marciano-large"
+            className="marciano-img"
+            style={{
+              width: `${spriteSize.alienWidth}px`,
+              height: 'auto',
+            }}
           />
         ))}
       </div>
