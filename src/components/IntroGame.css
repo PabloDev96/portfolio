@@ -55,6 +55,36 @@
   color: #00b894;
 }
 
+.mobile-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.control-button {
+  font-size: 24px;
+  padding: 15px 25px;
+  background-color: #006B56;
+  color: #00b894;
+  border: 2px solid #00b894;
+  border-radius: 10px;
+  font-family: 'PressStart2P', monospace;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.control-button:active {
+  background-color: #00b894;
+  color: #1e1e1e;
+}
+
 @media (max-width: 600px) {
   .marciano-img {
     width: 36vw;
@@ -64,3 +94,4 @@
     font-size: 7px;
   }
 }
+
