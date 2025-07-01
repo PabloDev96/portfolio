@@ -1,4 +1,3 @@
-// IntroGame.js
 import React, { useEffect, useRef, useState } from 'react';
 import './IntroGame.css';
 import naveImg from '../assets/nave.png';
@@ -12,6 +11,7 @@ export default function IntroGame({ onGameEnd }) {
   const [bullets, setBullets] = useState([]);
   const [explosions, setExplosions] = useState([]);
   const [x, setX] = useState(150);
+  const [isMobile, setIsMobile] = useState(false);
   const [spriteSize, setSpriteSize] = useState({
     shipWidth: 150,
     shipHeight: 150,
@@ -38,30 +38,34 @@ export default function IntroGame({ onGameEnd }) {
     nave.src = naveImg;
     let animationId;
 
+    useEffect(() => {
+      const checkMobile = () => {
+        setIsMobile(/Mobi|Android|iPhone|iPad|iPod|Touch/.test(navigator.userAgent));
+      };
+      checkMobile();
+    }, []);
+
     const resizeCanvas = () => {
       const prevWidth = canvas.width || window.innerWidth;
       canvas.width = window.innerWidth * 0.95;
       canvas.height = window.innerHeight * 0.8;
 
-      // Reescalar la nave proporcionalmente
       if (lastCanvasWidthRef.current !== null) {
         const ratio = canvas.width / lastCanvasWidthRef.current;
         setX((prevX) => prevX * ratio);
       }
       lastCanvasWidthRef.current = canvas.width;
 
-      // Escalado de sprites
       const baseWidth = canvas.width;
       const shipW = baseWidth * 0.15;
       const shipH = shipW;
       const alienW = baseWidth * 0.12;
-      const alienH = alienW;
 
       setSpriteSize({
         shipWidth: shipW,
         shipHeight: shipH,
         alienWidth: alienW,
-        alienHeight: alienH,
+        alienHeight: alienW,
       });
     };
 
@@ -127,30 +131,52 @@ export default function IntroGame({ onGameEnd }) {
   }, [bullets, x, explosions, onGameEnd, spriteSize]);
 
   useEffect(() => {
-  const handleKey = (e) => {
-    const canvas = canvasRef.current;
-    const NAV_SPEED = canvas.width * 0.02; // 2% del ancho del canvas
+    const handleKey = (e) => {
+      const canvas = canvasRef.current;
+      const NAV_SPEED = canvas.width * 0.02;
 
-    if (e.key === 'ArrowLeft') {
-      setX((prev) => Math.max(0, prev - NAV_SPEED));
-    }
-    if (e.key === 'ArrowRight') {
-      setX((prev) => Math.min(canvas.width - spriteSize.shipWidth, prev + NAV_SPEED));
-    }
-    if (e.key === ' ') {
-      setBullets((prev) => [
-        ...prev,
-        {
-          x: x + spriteSize.shipWidth / 2,
-          y: canvas.height - spriteSize.shipHeight - 30,
-        },
-      ]);
-    }
+      if (e.key === 'ArrowLeft') {
+        setX((prev) => Math.max(0, prev - NAV_SPEED));
+      }
+      if (e.key === 'ArrowRight') {
+        setX((prev) => Math.min(canvas.width - spriteSize.shipWidth, prev + NAV_SPEED));
+      }
+      if (e.key === ' ') {
+        setBullets((prev) => [
+          ...prev,
+          {
+            x: x + spriteSize.shipWidth / 2,
+            y: canvas.height - spriteSize.shipHeight - 30,
+          },
+        ]);
+      }
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [x, spriteSize]);
+
+  const moveLeft = () => {
+    const canvas = canvasRef.current;
+    const speed = canvas.width * 0.02;
+    setX((prev) => Math.max(0, prev - speed));
   };
 
-  window.addEventListener('keydown', handleKey);
-  return () => window.removeEventListener('keydown', handleKey);
-}, [x, spriteSize]);
+  const moveRight = () => {
+    const canvas = canvasRef.current;
+    const speed = canvas.width * 0.02;
+    setX((prev) => Math.min(canvas.width - spriteSize.shipWidth, prev + speed));
+  };
+
+  const shoot = () => {
+    const canvas = canvasRef.current;
+    setBullets((prev) => [
+      ...prev,
+      {
+        x: x + spriteSize.shipWidth / 2,
+        y: canvas.height - spriteSize.shipHeight - 30,
+      },
+    ]);
+  };
 
   return (
     <div className="intro-game">
@@ -170,11 +196,19 @@ export default function IntroGame({ onGameEnd }) {
           />
         ))}
       </div>
-      <div className="game-instructions">
-        <p>→ Mueve la nave con las flechas izquierda/derecha</p>
-        <p>→ Dispara con la barra espaciadora</p>
-        <p>→ Elige una sección disparando a un marciano</p>
-      </div>
+      {isMobile ? (
+        <div className="mobile-controls">
+          <button onTouchStart={moveLeft} className="control-button">◀️</button>
+          <button onTouchStart={shoot} className="control-button">🔫</button>
+          <button onTouchStart={moveRight} className="control-button">▶️</button>
+        </div>
+      ) : (
+        <div className="game-instructions">
+          <p>→ Mueve la nave con las flechas izquierda/derecha</p>
+          <p>→ Dispara con la barra espaciadora</p>
+          <p>→ Elige una sección disparando a un marciano</p>
+        </div>
+      )}
     </div>
   );
 }
