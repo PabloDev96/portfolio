@@ -1,6 +1,8 @@
 // IntroGame.js
 import React, { useEffect, useRef, useState } from 'react';
 import './IntroGame.css';
+import flecha from '../assets/flecha.png';
+import shootIcon from '../assets/diana.png';
 import naveImg from '../assets/nave.png';
 import marcianoAbout from '../assets/marcianoSobreMi.png';
 import marcianoProjects from '../assets/marcianoProyectos.png';
@@ -127,32 +129,32 @@ export default function IntroGame({ onGameEnd }) {
   }, [bullets, x, explosions, onGameEnd, spriteSize]);
 
   useEffect(() => {
-  const handleKey = (e) => {
-    const canvas = canvasRef.current;
-    const NAV_SPEED = canvas.width * 0.02; // 2% del ancho del canvas
+    const handleKey = (e) => {
+      const canvas = canvasRef.current;
+      const NAV_SPEED = canvas.width * 0.02; // 2% del ancho del canvas
 
-    if (e.key === 'ArrowLeft') {
-      setX((prev) => Math.max(0, prev - NAV_SPEED));
-    }
-    if (e.key === 'ArrowRight') {
-      setX((prev) => Math.min(canvas.width - spriteSize.shipWidth, prev + NAV_SPEED));
-    }
-    if (e.key === ' ') {
-      setBullets((prev) => [
-        ...prev,
-        {
-          x: x + spriteSize.shipWidth / 2,
-          y: canvas.height - spriteSize.shipHeight - 30,
-        },
-      ]);
-    }
-  };
+      if (e.key === 'ArrowLeft') {
+        setX((prev) => Math.max(0, prev - NAV_SPEED));
+      }
+      if (e.key === 'ArrowRight') {
+        setX((prev) => Math.min(canvas.width - spriteSize.shipWidth, prev + NAV_SPEED));
+      }
+      if (e.key === ' ') {
+        setBullets((prev) => [
+          ...prev,
+          {
+            x: x + spriteSize.shipWidth / 2,
+            y: canvas.height - spriteSize.shipHeight - 30,
+          },
+        ]);
+      }
+    };
 
-  window.addEventListener('keydown', handleKey);
-  return () => window.removeEventListener('keydown', handleKey);
-}, [x, spriteSize]);
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [x, spriteSize]);
 
-  
+
   const moveLeft = () => {
     const canvas = canvasRef.current;
     const speed = canvas.width * 0.02;
@@ -208,7 +210,7 @@ export default function IntroGame({ onGameEnd }) {
           />
         ))}
       </div>
-           
+
       <div className="mobile-controls">
         <button
           className="control-button"
@@ -217,7 +219,7 @@ export default function IntroGame({ onGameEnd }) {
           onMouseLeave={stopHold}
           onTouchStart={() => startHold(moveLeft)}
           onTouchEnd={stopHold}
-        >◀️</button>
+        ><img src={flecha} alt="Izquierda" style={{ width: '70px', height: '70px' }} /></button>
 
         <button
           className="control-button"
@@ -226,7 +228,7 @@ export default function IntroGame({ onGameEnd }) {
           onMouseLeave={stopHold}
           onTouchStart={() => startHold(shoot)}
           onTouchEnd={stopHold}
-        >🔫</button>
+        ><img src={shootIcon} alt="Disparar" style={{ width: '70px', height: '70px' }} /></button>
 
         <button
           className="control-button"
@@ -235,7 +237,13 @@ export default function IntroGame({ onGameEnd }) {
           onMouseLeave={stopHold}
           onTouchStart={() => startHold(moveRight)}
           onTouchEnd={stopHold}
-        >▶️</button>
+        >
+          <img
+            src={flecha}
+            alt="Derecha"
+            style={{ width: '70px', height: '70px', transform: 'scaleX(-1)' }}
+          />
+        </button>
       </div>
 
     </div>
