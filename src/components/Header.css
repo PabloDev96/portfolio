@@ -54,14 +54,18 @@
 }
 
 .icon-button {
-  background-color: #000;
+  background-color: #0c1821;
   border: 2px solid #00b894;
   border-radius: 50%;
-  padding: 12px;
+  padding: 2px;
   color: #00b894;
   text-decoration: none;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s ease;
+  width: 48px;
+  height: 48px;
 }
 
 .icon-button:hover.github {
@@ -71,5 +75,10 @@
 
 .icon-button:hover.linkedin {
   color: #0A66C2;
+  background-color: #fff;
+}
+
+.icon-button:hover.cv {
+  color: #00b894;
   background-color: #fff;
 }

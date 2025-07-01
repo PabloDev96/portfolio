@@ -17,8 +17,7 @@ const About = () => {
     <section style={{ padding: '40px 20px' }}>
       <h2 className="titulo" style={{ marginTop: '30px' }}>Sobre mí</h2>
       <p>
-        Soy desarrollador FullStack con experiencia en la creación de aplicaciones web funcionales,
-        modernas y escalables. Me apasiona transformar ideas en soluciones digitales eficientes.
+        Soy desarrollador web con enfoque FullStack y una fuerte motivación por seguir creciendo en este sector. Me apasiona crear soluciones funcionales y modernas que resuelvan problemas reales. Durante mi formación y experiencia práctica he trabajado con tecnologías como PHP, Java, MySQL, JavaScript y Tailwind, combinando conocimientos técnicos con una mentalidad proactiva y resolutiva. Actualmente me estoy especializando en frameworks como React y Spring Boot, con el objetivo de construir proyectos escalables y de alto impacto. Busco continuamente nuevos retos que me permitan aprender, aportar valor y evolucionar como profesional.
       </p>
 
        <h2 className="titulo" style={{ marginTop: '30px' }}>Estudios</h2>
@@ -31,9 +30,6 @@ const About = () => {
         </li>
         <li>
           <strong>Grado superior – Sistemas de telecomunicaciones e informáticos</strong> | CIFP Cerdeño (2015 – 2017)
-        </li>
-        <li>
-          <strong>Bachillerato – Ciencias Tecnológicas</strong> | IES La Ería (2012 – 2014)
         </li>
       </ul>
       
