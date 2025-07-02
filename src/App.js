@@ -23,7 +23,9 @@ function App() {
         />
       )}
 
-      {section === 'game' && <IntroGame onGameEnd={setSection} />}
+      {section === 'game' && (
+        <IntroGame onGameEnd={setSection} onBack={goToLanding} />
+      )}
 
       {section === 'basic' && <Portfolio onBack={goToLanding} />}
 

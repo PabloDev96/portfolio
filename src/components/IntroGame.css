@@ -3,7 +3,7 @@
   height: 100vh;
   padding: 5vh 5vw;
   box-sizing: border-box;
-  overflow: visible; /* importante para que los marcianos no se corten */
+  overflow: visible;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,8 +41,6 @@
   transition: transform 0.2s ease;
 }
 
-
-
 .game-instructions {
   font-family: 'PressStart2P', monospace;
   font-size: 10px;
@@ -53,14 +51,18 @@
   color: #00b894;
 }
 
-.mobile-controls {
-  position: relative;
-  margin-top: 20px;
-  width: 100%;
+.mobile-controls-wrapper {
   display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.mobile-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .control-button {
@@ -81,13 +83,32 @@
   color: #1e1e1e;
 }
 
+.intro-btn.center {
+  background-color: #1a1a1a;
+  color: #00e0c7;
+  border: 2px solid #00e0c7;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  font-family: 'PressStart2P', monospace;
+  font-size: 0.7rem;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 224, 199, 0.4);
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 0.5rem;
+}
+
+.intro-btn.center:hover {
+  background-color: #00e0c7;
+  color: #1a1a1a;
+  transform: scale(1.05);
+}
+
 @media (max-width: 600px) {
   .marciano-img {
-    width: 36vw;
+    width: 50vw;
   }
 
   .game-instructions {
     font-size: 7px;
   }
 }
-

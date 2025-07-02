@@ -8,7 +8,7 @@ import marcianoAbout from '../assets/marcianoSobreMi.png';
 import marcianoProjects from '../assets/marcianoProyectos.png';
 import marcianoContact from '../assets/marcianoContacto.PNG';
 
-export default function IntroGame({ onGameEnd }) {
+export default function IntroGame({ onGameEnd, onBack }) {
   const lastCanvasWidthRef = useRef(null);
   const canvasRef = useRef(null);
   const [bullets, setBullets] = useState([]);
@@ -54,9 +54,12 @@ export default function IntroGame({ onGameEnd }) {
 
       // Escalado de sprites
       const baseWidth = canvas.width;
-      const shipW = baseWidth * 0.15;
+      const isMobile = window.innerWidth < 600;
+
+      const shipW = baseWidth * (isMobile ? 0.22 : 0.11);
       const shipH = shipW;
-      const alienW = baseWidth * 0.12;
+
+      const alienW = baseWidth * (isMobile ? 0.18 : 0.09); // marcianos más grandes en móvil, más pequeños en escritorio
       const alienH = alienW;
 
       setSpriteSize({
@@ -211,39 +214,47 @@ export default function IntroGame({ onGameEnd }) {
         ))}
       </div>
 
-      <div className="mobile-controls">
-        <button
-          className="control-button"
-          onMouseDown={() => startHold(moveLeft)}
-          onMouseUp={stopHold}
-          onMouseLeave={stopHold}
-          onTouchStart={() => startHold(moveLeft)}
-          onTouchEnd={stopHold}
-        ><img src={flecha} alt="Izquierda" style={{ width: '70px', height: '70px' }} /></button>
+      <div className="mobile-controls-wrapper">
+        <div className="mobile-controls">
+          <button
+            className="control-button"
+            onMouseDown={() => startHold(moveLeft)}
+            onMouseUp={stopHold}
+            onMouseLeave={stopHold}
+            onTouchStart={() => startHold(moveLeft)}
+            onTouchEnd={stopHold}
+          >
+            <img src={flecha} alt="Izquierda" style={{ width: '70px', height: '70px' }} />
+          </button>
 
-        <button
-          className="control-button"
-          onMouseDown={() => startHold(shoot)}
-          onMouseUp={stopHold}
-          onMouseLeave={stopHold}
-          onTouchStart={() => startHold(shoot)}
-          onTouchEnd={stopHold}
-        ><img src={shootIcon} alt="Disparar" style={{ width: '70px', height: '70px' }} /></button>
+          <button
+            className="control-button"
+            onMouseDown={() => startHold(shoot)}
+            onMouseUp={stopHold}
+            onMouseLeave={stopHold}
+            onTouchStart={() => startHold(shoot)}
+            onTouchEnd={stopHold}
+          >
+            <img src={shootIcon} alt="Disparar" style={{ width: '70px', height: '70px' }} />
+          </button>
 
-        <button
-          className="control-button"
-          onMouseDown={() => startHold(moveRight)}
-          onMouseUp={stopHold}
-          onMouseLeave={stopHold}
-          onTouchStart={() => startHold(moveRight)}
-          onTouchEnd={stopHold}
-        >
-          <img
-            src={flecha}
-            alt="Derecha"
-            style={{ width: '70px', height: '70px', transform: 'scaleX(-1)' }}
-          />
-        </button>
+          <button
+            className="control-button"
+            onMouseDown={() => startHold(moveRight)}
+            onMouseUp={stopHold}
+            onMouseLeave={stopHold}
+            onTouchStart={() => startHold(moveRight)}
+            onTouchEnd={stopHold}
+          >
+            <img
+              src={flecha}
+              alt="Derecha"
+              style={{ width: '70px', height: '70px', transform: 'scaleX(-1)' }}
+            />
+          </button>
+        </div>
+
+        <button className="intro-btn center" onClick={onBack}>Volver</button>
       </div>
 
     </div>
