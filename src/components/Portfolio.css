@@ -160,6 +160,7 @@ h1, h2 {
   }
 
   .hero .image-wrapper img {
+    order: -1;
     width: 150px;
     height: 150px;
   }
