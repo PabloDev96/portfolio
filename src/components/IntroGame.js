@@ -7,6 +7,9 @@ import naveImg from '../assets/nave.png';
 import marcianoAbout from '../assets/marcianoSobreMi.png';
 import marcianoProjects from '../assets/marcianoProyectos.png';
 import marcianoContact from '../assets/marcianoContacto.PNG';
+import { FaArrowLeft } from "react-icons/fa";
+import { BsArrowLeftSquareFill, BsArrowRightSquareFill } from "react-icons/bs";
+import { SlTarget } from "react-icons/sl";
 
 export default function IntroGame({ onGameEnd, onBack }) {
   const lastCanvasWidthRef = useRef(null);
@@ -197,6 +200,9 @@ export default function IntroGame({ onGameEnd, onBack }) {
 
   return (
     <div className="intro-game">
+      <button className="back-btn-top" onClick={onBack}>
+        <FaArrowLeft />
+      </button>
       <canvas ref={canvasRef} className="pixel-canvas" />
       <div className="marcianos">
         {sections.map((s) => (
@@ -224,7 +230,7 @@ export default function IntroGame({ onGameEnd, onBack }) {
             onTouchStart={() => startHold(moveLeft)}
             onTouchEnd={stopHold}
           >
-            <img src={flecha} alt="Izquierda" style={{ width: '70px', height: '70px' }} />
+            <BsArrowLeftSquareFill size={60} />
           </button>
 
           <button
@@ -235,7 +241,7 @@ export default function IntroGame({ onGameEnd, onBack }) {
             onTouchStart={() => startHold(shoot)}
             onTouchEnd={stopHold}
           >
-            <img src={shootIcon} alt="Disparar" style={{ width: '70px', height: '70px' }} />
+            <SlTarget size={60} />
           </button>
 
           <button
@@ -246,15 +252,10 @@ export default function IntroGame({ onGameEnd, onBack }) {
             onTouchStart={() => startHold(moveRight)}
             onTouchEnd={stopHold}
           >
-            <img
-              src={flecha}
-              alt="Derecha"
-              style={{ width: '70px', height: '70px', transform: 'scaleX(-1)' }}
-            />
+            <BsArrowRightSquareFill size={60} />
           </button>
         </div>
 
-        <button className="intro-btn center" onClick={onBack}>Volver</button>
       </div>
 
     </div>
