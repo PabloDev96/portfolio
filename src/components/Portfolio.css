@@ -208,6 +208,38 @@ h2 {
     transform: scale(1.1);
 }
 
+.up-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #00E0C7;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 0 10px rgba(0, 224, 199, 0.4);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  z-index: 1000;
+}
+
+.up-btn:hover {
+  background-color: #009394;
+  transform: translateY(-2px);
+}
+
+.up-btn svg {
+  width: 20px;
+  height: 20px;
+  color: #006270;
+}
+
+
 @media screen and (max-width: 600px) {
     .portfolio-container {
         padding: 1rem;

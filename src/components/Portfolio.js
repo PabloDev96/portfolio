@@ -13,8 +13,14 @@ import apacheLogo from '../assets/tech/apache.png';
 import laravelLogo from '../assets/tech/laravel.png';
 import reactLogo from '../assets/tech/react.png';
 import springLogo from '../assets/tech/spring.png';
+import { FaArrowUp } from "react-icons/fa";
 
 const Portfolio = ({ onBack }) => {
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <div className="portfolio-container">
             <section className="hero">
@@ -136,7 +142,8 @@ const Portfolio = ({ onBack }) => {
                 <p>Teléfono: +34 659 103 719</p>
             </section>
 
-            <button className="back-btn" onClick={onBack}>Volver al inicio</button>
+            <button className="back-btn" onClick={onBack}>Cambiar vista</button>
+            <button className="up-btn" onClick={scrollToTop}><FaArrowUp /></button>
         </div>
     );
 };
