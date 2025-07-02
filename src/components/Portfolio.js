@@ -11,19 +11,15 @@ const Portfolio = ({ onBack }) => {
                     <p className="section-label">DESARROLLADOR WEB</p>
                     <h1>Hola, soy <span className="highlight">Pablo Díaz</span></h1>
                     <p>Diseño y desarrollo aplicaciones web modernas, funcionales y con personalidad.</p>
-                    <div className="icon-buttons">
-                        <a
-                            href="/CV_PabloDíazGarcía.pdf"
-                            download
-                            className="icon-button cv"
-                        >
+                    <div className="icon-btns">
+                        <a href="/CV_PabloDíazGarcía.pdf" target="_blank" rel="noopener noreferrer" className="icon-btn cv">
                             <TbFileCv size={32} />
                         </a>
                         <a
                             href="https://www.linkedin.com/in/pablo-díaz-garcía-344048350"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="icon-button linkedin"
+                            className="icon-btn linkedin"
                         >
                             <FaLinkedin size={32} />
                         </a>
@@ -31,7 +27,7 @@ const Portfolio = ({ onBack }) => {
                             href="https://github.com/PabloDev96"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="icon-button github"
+                            className="icon-btn github"
                         >
                             <FaGithub size={32} />
                         </a>
@@ -47,8 +43,7 @@ const Portfolio = ({ onBack }) => {
                 <p className="section-label">SOBRE MÍ</p>
                 <h2>¿Quién soy?</h2>
                 <p>
-                    Desarrollador web con enfoque FullStack, proactivo y enfocado en soluciones escalables.
-                    Trabajo con tecnologías como React, Spring Boot, JavaScript, PHP, MySQL y más.
+                    Soy desarrollador web con enfoque FullStack y una fuerte motivación por seguir creciendo en este sector. Me apasiona crear soluciones funcionales y modernas que resuelvan problemas reales. Durante mi formación y experiencia práctica he trabajado con tecnologías como PHP, Java, MySQL, JavaScript y Tailwind, combinando conocimientos técnicos con una mentalidad proactiva y resolutiva. Actualmente me estoy especializando en frameworks como React y Spring Boot, con el objetivo de construir proyectos escalables y de alto impacto. Busco continuamente nuevos retos que me permitan aprender, aportar valor y evolucionar como profesional.
                 </p>
             </section>
 
@@ -66,8 +61,8 @@ const Portfolio = ({ onBack }) => {
             <section className="contact">
                 <p className="section-label">CONTACTO</p>
                 <h2>¿Trabajamos juntos?</h2>
-                <p>Email: tuemail@example.com</p>
-                <p>Teléfono: +34 600 000 000</p>
+                <p>Email: pablo.diazgar@gmail.com</p>
+                <p>Teléfono: +34 659 103 719</p>
             </section>
 
             <button className="back-btn" onClick={onBack}>Volver al inicio</button>

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+p{
+    text-align: justify;
+}
+
 .portfolio-container {
   font-family: 'Poppins', sans-serif;
   background-color: #006270;
@@ -32,10 +36,9 @@ h1, h2 {
 
 .hero {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
   gap: 2rem;
+  margin-bottom: 4rem;
 }
 
 .hero .text-content {
@@ -118,14 +121,14 @@ h1, h2 {
   color: #FFFFFF;
 }
 
-.icon-buttons {
+.icon-btns {
   display: flex;
   gap: 1rem;
   justify-content: flex-start;
   margin-top: 1.5rem;
 }
 
-.icon-button {
+.icon-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,19 +136,17 @@ h1, h2 {
   color: #006270;
   width: 40px;
   height: 40px;
-  border-radius: 30%;
+  border-radius: 25%;
   text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0 0 10px rgba(0, 224, 199, 0.3);
 }
 
-.icon-button:hover {
+.icon-btn:hover {
   background-color: #009394;
   color: #FFFFFF;
   transform: scale(1.1);
 }
-
-
 
 @media screen and (max-width: 600px) {
   .portfolio-container {
@@ -179,6 +180,10 @@ h1, h2 {
   .btn {
     width: 100%;
     text-align: center;
+  }
+
+  .icon-btns {
+    justify-content: center;
   }
 
   .service-grid {
