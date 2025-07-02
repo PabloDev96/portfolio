@@ -159,11 +159,15 @@ h1, h2 {
     text-align: center;
   }
 
-  .hero .image-wrapper img {
-    order: -1;
-    width: 150px;
-    height: 150px;
-  }
+  .hero .image-wrapper {
+  order: -1;
+  margin-bottom: 1rem;
+}
+
+.hero .image-wrapper img {
+  width: 150px;
+  height: 150px;
+}
 
   h1 {
     font-size: 1.7rem;
