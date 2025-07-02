@@ -6,7 +6,7 @@ import shootIcon from '../assets/diana.png';
 import naveImg from '../assets/nave.png';
 import marcianoAbout from '../assets/marcianoSobreMi.png';
 import marcianoProjects from '../assets/marcianoProyectos.png';
-import marcianoContact from '../assets/marcianoContacto.png';
+import marcianoContact from '../assets/marcianoContacto.PNG';
 
 export default function IntroGame({ onGameEnd }) {
   const lastCanvasWidthRef = useRef(null);

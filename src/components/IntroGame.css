@@ -41,9 +41,7 @@
   transition: transform 0.2s ease;
 }
 
-.marciano-img:hover {
-  transform: scale(1.1);
-}
+
 
 .game-instructions {
   font-family: 'PressStart2P', monospace;
