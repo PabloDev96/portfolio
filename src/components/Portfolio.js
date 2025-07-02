@@ -2,6 +2,17 @@ import React from 'react';
 import './Portfolio.css';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { TbFileCv } from "react-icons/tb";
+import htmlLogo from '../assets/tech/html5.png';
+import cssLogo from '../assets/tech/css3.png';
+import tailwindLogo from '../assets/tech/tailwind.png';
+import jsLogo from '../assets/tech/javascript.png';
+import phpLogo from '../assets/tech/php.png';
+import mysqlLogo from '../assets/tech/mysql.png';
+import gitLogo from '../assets/tech/git.png';
+import apacheLogo from '../assets/tech/apache.png';
+import laravelLogo from '../assets/tech/laravel.png';
+import reactLogo from '../assets/tech/react.png';
+import springLogo from '../assets/tech/spring.png';
 
 const Portfolio = ({ onBack }) => {
     return (
@@ -55,6 +66,66 @@ const Portfolio = ({ onBack }) => {
                     <div className="service-card">Aplicaciones React</div>
                     <div className="service-card">API REST y backend</div>
                     <div className="service-card">Edición y mantenimiento</div>
+                </div>
+            </section>
+
+            <section className="technologies-section">
+                <p className="section-label">TECNOLOGÍAS</p>
+                <h2>¿Cuáles manejo?</h2>
+
+                <div className="technologies">
+                    <div className="tech-card">
+                        <img src={htmlLogo} alt="HTML" />
+                        <span>HTML</span>
+                    </div>
+                    <div className="tech-card">
+                        <img src={cssLogo} alt="CSS" />
+                        <span>CSS</span>
+                    </div>
+                    <div className="tech-card">
+                        <img src={tailwindLogo} alt="Tailwind" />
+                        <span>Tailwind</span>
+                    </div>
+                    <div className="tech-card">
+                        <img src={jsLogo} alt="JavaScript" />
+                        <span>JavaScript</span>
+                    </div>
+                    <div className="tech-card">
+                        <img src={phpLogo} alt="PHP" />
+                        <span>PHP</span>
+                    </div>
+                    <div className="tech-card">
+                        <img src={mysqlLogo} alt="MySQL" />
+                        <span>MySQL</span>
+                    </div>
+                    <div className="tech-card">
+                        <img src={gitLogo} alt="Git" />
+                        <span>Git</span>
+                    </div>
+                    <div className="tech-card">
+                        <img src={apacheLogo} alt="Apache" />
+                        <span>Apache</span>
+                    </div>
+                    <div className="tech-card">
+                        <img src={laravelLogo} alt="Laravel" />
+                        <span>Laravel</span>
+                    </div>
+                </div>
+            </section>
+
+            <section className="learning-section">
+                <p className="section-label">ACTUALMENTE EN FORMACIÓN</p>
+                <h2>Ampliando conocimientos en:</h2>
+
+                <div className="learning">
+                    <div className="learning-card">
+                        <img src={reactLogo} alt="React" />
+                        <span>React</span>
+                    </div>
+                    <div className="learning-card">
+                        <img src={springLogo} alt="Spring" />
+                        <span>Spring</span>
+                    </div>
                 </div>
             </section>
 
