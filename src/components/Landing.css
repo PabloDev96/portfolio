@@ -1,0 +1,44 @@
+/* components/Landing.css */
+.landing-container {
+  font-family: 'Poppins', sans-serif;
+  background-color: #006270;
+  color: #FFFFFF;
+  width: 100vw;
+  height: 100vh; /* asegura que no haya scroll vertical */
+  overflow: hidden; /* por si algo se desborda */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.landing-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.landing-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.landing-buttons button {
+  background-color: #00E0C7;
+  color: #006270;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 250px;
+}
+
+.landing-buttons button:hover {
+  background-color: #009394;
+  color: #FFFFFF;
+}
