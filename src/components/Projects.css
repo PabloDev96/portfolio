@@ -12,11 +12,22 @@
   text-align: center;
 }
 
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
 .retro-project {
   position: relative;
-  width: 600px;
-  max-width: 100%;
+  width: 320px;
   margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.retro-project:hover {
+  transform: scale(1.03);
 }
 
 .retro-image {
@@ -24,50 +35,30 @@
   display: block;
 }
 
-.screen-overlay {
+/* Ajustado al marco verde del PC retro */
+.tech-overlay {
   position: absolute;
-  top: 21%;
-  left: 13.3%;
-  width: 73%;
-  height: 58%;
-  padding: 20px;
-  color: black;
-  font-family: 'VT323', monospace;
-  font-size: 18px;
-  line-height: 1.5;
-  overflow: hidden;
+  top: 19.5%;
+  left: 17.8%;
+  width: 64.5%;
+  height: 36.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.3s ease;
+  flex-wrap: wrap;
 }
 
-.retro-project:hover .screen-overlay {
+.tech-overlay img {
+  width: 28px;
+  height: auto;
+  filter: drop-shadow(1px 1px 1px #000);
+}
+
+.retro-project:hover .tech-overlay {
   opacity: 1;
   pointer-events: auto;
-}
-
-.typewriter {
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid black;
-  width: 0;
-  animation: typing 3s steps(50, end) forwards, blink 0.7s step-end infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: black;
-  }
 }
