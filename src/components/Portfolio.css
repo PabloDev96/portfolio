@@ -294,3 +294,75 @@ h2 {
         font-size: 0.95rem;
     }
 }
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card-image {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  height: 200px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 6px rgba(0, 224, 199, 0.25);
+}
+
+.project-card-image:hover {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 98, 112, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #00E0C7;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 1rem;
+  text-align: center;
+}
+
+.project-card-image:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-overlay h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.project-overlay p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+.tech-icons {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tech-icons img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px rgba(0, 224, 199, 0.5));
+  transition: transform 0.2s ease;
+}
+
+.tech-icons img:hover {
+  transform: scale(1.1);
+}

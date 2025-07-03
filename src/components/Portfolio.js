@@ -13,6 +13,7 @@ import apacheLogo from '../assets/tech/apache.png';
 import laravelLogo from '../assets/tech/laravel.png';
 import reactLogo from '../assets/tech/react.png';
 import springLogo from '../assets/tech/spring.png';
+import javaLogo from '../assets/tech/java.png';
 import { FaArrowUp } from "react-icons/fa";
 
 const Portfolio = ({ onBack }) => {
@@ -64,6 +65,52 @@ const Portfolio = ({ onBack }) => {
                 </p>
             </section>
 
+            <section className="projects">
+                <p className="section-label">PROYECTOS</p>
+                <h2>¿En qué he trabajado?</h2>
+                <div className="project-grid">
+                    <div
+                        className="project-card-image"
+                        style={{ backgroundImage: `url(${require('../assets/projects/laptop-taskly.png')})` }}
+                    >
+                        <div className="project-overlay">
+                            <h3>Gestor de Tareas - Taskly</h3>
+                            <div className="tech-icons">
+                                <img src={require('../assets/tech/html5.png')} alt="HTML" />
+                                <img src={require('../assets/tech/tailwind.png')} alt="Tailwind" />
+                                <img src={require('../assets/tech/javascript.png')} alt="JavaScript" />
+                                <img src={require('../assets/tech/php.png')} alt="PHP" />
+                                <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="project-card">
+                        <img src="/preview-reactapp.png" alt="React App" />
+                        <div className="project-info">
+                            <h3>Aplicaciones React</h3>
+                            <p className="tech-tags">React · Hooks · Router</p>
+                        </div>
+                    </div>
+
+                    <div className="project-card">
+                        <img src="/preview-api.png" alt="API REST" />
+                        <div className="project-info">
+                            <h3>API REST y backend</h3>
+                            <p className="tech-tags">Node · Express · MongoDB</p>
+                        </div>
+                    </div>
+
+                    <div className="project-card">
+                        <img src="/preview-maintenance.png" alt="Edición" />
+                        <div className="project-info">
+                            <h3>Edición y mantenimiento</h3>
+                            <p className="tech-tags">HTML · CSS · CMS</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section className="services">
                 <p className="section-label">SERVICIOS</p>
                 <h2>¿Qué puedo hacer?</h2>
@@ -95,6 +142,10 @@ const Portfolio = ({ onBack }) => {
                     <div className="tech-card">
                         <img src={jsLogo} alt="JavaScript" />
                         <span>JavaScript</span>
+                    </div>
+                    <div className="tech-card">
+                        <img src={javaLogo} alt="JavaScript" />
+                        <span>Java</span>
                     </div>
                     <div className="tech-card">
                         <img src={phpLogo} alt="PHP" />
