@@ -1,12 +1,21 @@
 import React from 'react';
+import './Projects.css';
+import pcRetro from '../assets/projects/pcretro.png';
 
 const Projects = () => {
   return (
-    <section style={{ padding: '40px 20px' }}>
-      <h2>Proyectos</h2>
-      <div>
-        <h3>Gestor de tareas</h3>
-        <p>Plataforma para crear y gestionar proyectos y tareas, con asignación de usuarios y control de estados.</p>
+    <section className="projects-section">
+      <h2 className="section-title">Proyectos</h2>
+
+      <div className="retro-project">
+        <img src={pcRetro} alt="Ordenador retro" className="retro-image" />
+
+        <div className="screen-overlay">
+          <p className="typewriter">
+            Gestor de tareas<br />
+            HTML · Tailwind · JavaScript · PHP · MySQL
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -1,8 +1,6 @@
 // IntroGame.js
 import React, { useEffect, useRef, useState } from 'react';
 import './IntroGame.css';
-import flecha from '../assets/flecha.png';
-import shootIcon from '../assets/diana.png';
 import naveImg from '../assets/nave.png';
 import marcianoAbout from '../assets/marcianoSobreMi.png';
 import marcianoProjects from '../assets/marcianoProyectos.png';
