@@ -6,7 +6,7 @@ import shootIcon from '../assets/diana.png';
 import naveImg from '../assets/nave.png';
 import marcianoAbout from '../assets/marcianoSobreMi.png';
 import marcianoProjects from '../assets/marcianoProyectos.png';
-import marcianoContacto from '../assets/marcianoContacto.png';
+import marcianoContact from '../assets/marcianoContacto.png';
 import { FaArrowLeft } from "react-icons/fa";
 import { BsArrowLeftSquareFill, BsArrowRightSquareFill } from "react-icons/bs";
 import { SlTarget } from "react-icons/sl";
