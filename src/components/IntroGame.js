@@ -33,7 +33,7 @@ export default function IntroGame({ onGameEnd, onBack }) {
   const sections = [
     { id: 'about', label: 'Sobre mí', img: marcianoAbout },
     { id: 'projects', label: 'Proyectos', img: marcianoProjects },
-    { id: 'contact', label: 'Contacto', img: marcianoContacto },
+    { id: 'contact', label: 'Contacto', img: marcianoContact },
   ];
 
   useEffect(() => {
