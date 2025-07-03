@@ -14,6 +14,7 @@ import laravelLogo from '../assets/tech/laravel.png';
 import reactLogo from '../assets/tech/react.png';
 import springLogo from '../assets/tech/spring.png';
 import javaLogo from '../assets/tech/java.png';
+import laptopImg from '../assets/projects/laptop.png';
 import { FaArrowUp } from "react-icons/fa";
 
 const Portfolio = ({ onBack }) => {
@@ -85,27 +86,51 @@ const Portfolio = ({ onBack }) => {
                         </div>
                     </div>
 
-                    <div className="project-card">
-                        <img src="/preview-reactapp.png" alt="React App" />
-                        <div className="project-info">
-                            <h3>Aplicaciones React</h3>
-                            <p className="tech-tags">React · Hooks · Router</p>
+                    <div
+                        className="project-card-image"
+                        style={{ backgroundImage: `url(${require('../assets/projects/laptop.png')})` }}
+                    >
+                        <div className="project-overlay">
+                            <h3>Web adopción mascotas</h3>
+                            <div className="tech-icons">
+                                <img src={require('../assets/tech/html5.png')} alt="HTML" />
+                                <img src={require('../assets/tech/tailwind.png')} alt="Tailwind" />
+                                <img src={require('../assets/tech/javascript.png')} alt="JavaScript" />
+                                <img src={require('../assets/tech/php.png')} alt="PHP" />
+                                <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
+                            </div>
                         </div>
                     </div>
 
-                    <div className="project-card">
-                        <img src="/preview-api.png" alt="API REST" />
-                        <div className="project-info">
-                            <h3>API REST y backend</h3>
-                            <p className="tech-tags">Node · Express · MongoDB</p>
+                    <div
+                        className="project-card-image"
+                        style={{ backgroundImage: `url(${require('../assets/projects/laptop.png')})` }}
+                    >
+                        <div className="project-overlay">
+                            <h3>Acortador URLs</h3>
+                            <div className="tech-icons">
+                                <img src={require('../assets/tech/html5.png')} alt="HTML" />
+                                <img src={require('../assets/tech/tailwind.png')} alt="Tailwind" />
+                                <img src={require('../assets/tech/javascript.png')} alt="JavaScript" />
+                                <img src={require('../assets/tech/php.png')} alt="PHP" />
+                                <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
+                            </div>
                         </div>
                     </div>
 
-                    <div className="project-card">
-                        <img src="/preview-maintenance.png" alt="Edición" />
-                        <div className="project-info">
-                            <h3>Edición y mantenimiento</h3>
-                            <p className="tech-tags">HTML · CSS · CMS</p>
+                    <div
+                        className="project-card-image"
+                        style={{ backgroundImage: `url(${require('../assets/projects/laptop.png')})` }}
+                    >
+                        <div className="project-overlay">
+                            <h3>GTA VI</h3>
+                            <div className="tech-icons">
+                                <img src={require('../assets/tech/html5.png')} alt="HTML" />
+                                <img src={require('../assets/tech/tailwind.png')} alt="Tailwind" />
+                                <img src={require('../assets/tech/javascript.png')} alt="JavaScript" />
+                                <img src={require('../assets/tech/php.png')} alt="PHP" />
+                                <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
+                            </div>
                         </div>
                     </div>
                 </div>
