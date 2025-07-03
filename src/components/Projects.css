@@ -1,64 +1,168 @@
 .projects-section {
-  padding: 40px 20px;
-  background-color: #0d1b24;
-  min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #0d1b24;
+    min-height: 100vh;
 }
 
 .section-title {
-  color: #00b894;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 1.5rem;
-  margin-bottom: 40px;
-  text-align: center;
+    color: #00b894;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 .project-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
-.retro-project {
-  position: relative;
-  width: 320px;
-  margin: 0 auto;
-  transition: transform 0.3s ease;
+/* Contenedor que agrupa imagen y descripción */
+.image-and-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 20px;
+    transition: all 0.4s ease;
+    position: relative;
+    background-color: rgba(0, 184, 148, 0.08);
+    /* verde suave translúcido */
+    border: 2px solid #00b894;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 12px rgba(0, 184, 148, 0.3);
 }
 
-.retro-project:hover {
-  transform: scale(1.03);
+/* Imagen del PC retro */
+.image-wrapper {
+    width: 360px;
+    transition: transform 0.4s ease;
+    z-index: 1;
 }
 
 .retro-image {
-  width: 100%;
-  display: block;
+    width: 100%;
+    display: block;
 }
 
-/* Ajustado al marco verde del PC retro */
+/* Overlay de tecnologías en el marco de la pantalla */
 .tech-overlay {
-  position: absolute;
-  top: 19.5%;
-  left: 17.8%;
-  width: 64.5%;
-  height: 36.5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  flex-wrap: wrap;
+    position: absolute;
+    top: 19.5%;
+    left: 17.8%;
+    width: 64.5%;
+    height: 36.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    flex-wrap: wrap;
 }
 
 .tech-overlay img {
-  width: 28px;
-  height: auto;
-  filter: drop-shadow(1px 1px 1px #000);
+    width: 28px;
+    height: auto;
+    filter: drop-shadow(1px 1px 1px #000);
 }
 
 .retro-project:hover .tech-overlay {
-  opacity: 1;
-  pointer-events: auto;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Descripción del proyecto */
+.project-description {
+    display: none;
+    max-width: 300px;
+    color: #dcdcdc;
+    font-size: 0.6rem;
+    white-space: normal;
+    text-align: justify;
+}
+
+
+
+/* Hover: mover imagen y mostrar descripción */
+.retro-project:hover .image-and-description {
+    justify-content: flex-start;
+}
+
+.retro-project:hover .image-wrapper {
+    transform: translateX(-20px);
+}
+
+.retro-project:hover .project-description {
+    display: block;
+}
+
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;  
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.project-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 4px 4px;
+  background-color: #00b894;
+  color: #0d1b24;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.project-btn:hover {
+  background-color: #00a07f;
+  transform: scale(1.05);
+}
+
+.project-btn svg {
+  font-size: 1.3rem;
+}
+
+/* Responsive: comportamiento en móviles */
+@media (max-width: 768px) {
+    .retro-project {
+        width: 100%;
+        max-width: 90vw;
+    }
+
+    .image-and-description {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-wrapper {
+        transform: none !important;
+    }
+
+    .project-description {
+        opacity: 1;
+        transform: none;
+        position: static;
+        margin-top: 1rem;
+        text-align: justify;
+    }
+
+
+    .retro-project:hover .project-description {
+        transform: none;
+    }
 }
