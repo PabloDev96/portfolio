@@ -1,5 +1,6 @@
 import React from 'react';
 import './Portfolio.css';
+import { FaLink } from "react-icons/fa6";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { TbFileCv } from "react-icons/tb";
 import htmlLogo from '../assets/tech/html5.png';
@@ -89,8 +90,16 @@ const Portfolio = ({ onBack }) => {
                             </div>
                         </div>
                         <div className="project-description">
-                            <p>Esta es una breve descripción del proyecto.</p>
+                            <p>Proyecto grupal donde desarrollé el backend (APIs para usuarios, proyectos y tareas) e integré con el frontend. La app permite crear y gestionar proyectos y tareas con vista Kanban (drag and drop), login, registro y control de accesos por roles. Aplicamos buenas prácticas y metodologías ágiles.</p>
+                         <div className="project-btns">
+                            <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                <FaLink />
+                            </a>
+                            <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                <FaGithub />
+                            </a>
                         </div>
+                        </div>                       
                     </div>
 
 
@@ -112,8 +121,16 @@ const Portfolio = ({ onBack }) => {
                             </div>
                         </div>
                         <div className="project-description">
-                            <p>Esta es una breve descripción del proyecto.</p>
+                            <p>App fullstack para publicar y buscar mascotas en adopción. Incluye filtros, perfiles, login/registro y carga de imágenes. Desarrollada con React, Node.js y MongoDB, enfocada en una experiencia accesible y responsive.</p>
+                         <div className="project-btns">
+                            <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                <FaLink />
+                            </a>
+                            <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                <FaGithub />
+                            </a>
                         </div>
+                        </div>                       
                     </div>
 
                     {/*PROYECTO 3*/}
@@ -134,8 +151,18 @@ const Portfolio = ({ onBack }) => {
                             </div>
                         </div>
                         <div className="project-description">
-                            <p>Esta es una breve descripción del proyecto.</p>
+                            <p>Herramienta web para acortar enlaces, generar redirecciones y contar clics. Desarrollada con Node.js, MongoDB y JS vanilla. Soporta QR, validación y gestión por usuario.
+
+</p>
+                         <div className="project-btns">
+                            <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                <FaLink />
+                            </a>
+                            <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                <FaGithub />
+                            </a>
                         </div>
+                        </div>                       
                     </div>
 
                     {/*PROYECTO 4*/}
@@ -156,8 +183,16 @@ const Portfolio = ({ onBack }) => {
                             </div>
                         </div>
                         <div className="project-description">
-                            <p>Esta es una breve descripción del proyecto.</p>
+                            <p>Página promocional ficticia de GTA VI con trailer, info del juego y suscripción por correo. Hecha en HTML, CSS y JS, con diseño responsive y animaciones visuales.</p>
+                         <div className="project-btns">
+                            <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                <FaLink />
+                            </a>
+                            <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                <FaGithub />
+                            </a>
                         </div>
+                        </div>                       
                     </div>
 
                 </div>
