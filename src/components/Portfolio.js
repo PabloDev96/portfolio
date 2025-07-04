@@ -70,69 +70,96 @@ const Portfolio = ({ onBack }) => {
                 <p className="section-label">PROYECTOS</p>
                 <h2>¿En qué he trabajado?</h2>
                 <div className="project-grid">
-                    <div
-                        className="project-card-image"
-                        style={{ backgroundImage: `url(${require('../assets/projects/laptop-taskly.png')})` }}
-                    >
-                        <div className="project-overlay">
-                            <h3>Gestor de Tareas - Taskly</h3>
-                            <div className="tech-icons">
-                                <img src={require('../assets/tech/html5.png')} alt="HTML" />
-                                <img src={require('../assets/tech/tailwind.png')} alt="Tailwind" />
-                                <img src={require('../assets/tech/javascript.png')} alt="JavaScript" />
-                                <img src={require('../assets/tech/php.png')} alt="PHP" />
-                                <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
+
+                    {/*PROYECTO 1*/}
+                    <div className="project-card-image">
+                        <div
+                            className="image-container"
+                            style={{ backgroundImage: `url(${require('../assets/projects/laptop-taskly.png')})` }}
+                        >
+                            <div className="project-overlay">
+                                <h3>Gestor de Tareas - Taskly</h3>
+                                <div className="tech-icons">
+                                    <img src={require('../assets/tech/html5.png')} alt="HTML" />
+                                    <img src={require('../assets/tech/tailwind.png')} alt="Tailwind" />
+                                    <img src={require('../assets/tech/javascript.png')} alt="JavaScript" />
+                                    <img src={require('../assets/tech/php.png')} alt="PHP" />
+                                    <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
+                                </div>
                             </div>
+                        </div>
+                        <div className="project-description">
+                            <p>Esta es una breve descripción del proyecto.</p>
                         </div>
                     </div>
 
-                    <div
-                        className="project-card-image"
-                        style={{ backgroundImage: `url(${require('../assets/projects/laptop.png')})` }}
-                    >
-                        <div className="project-overlay">
-                            <h3>Web adopción mascotas</h3>
-                            <div className="tech-icons">
-                                <img src={require('../assets/tech/html5.png')} alt="HTML" />
-                                <img src={require('../assets/tech/tailwind.png')} alt="Tailwind" />
-                                <img src={require('../assets/tech/javascript.png')} alt="JavaScript" />
-                                <img src={require('../assets/tech/php.png')} alt="PHP" />
-                                <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
+
+                    {/*PROYECTO 2*/}
+                    <div className="project-card-image">
+                        <div
+                            className="image-container"
+                            style={{ backgroundImage: `url(${require('../assets/projects/laptop-taskly.png')})` }}
+                        >
+                            <div className="project-overlay">
+                                <h3>Web adopción mascotas</h3>
+                                <div className="tech-icons">
+                                    <img src={require('../assets/tech/html5.png')} alt="HTML" />
+                                    <img src={require('../assets/tech/tailwind.png')} alt="Tailwind" />
+                                    <img src={require('../assets/tech/javascript.png')} alt="JavaScript" />
+                                    <img src={require('../assets/tech/php.png')} alt="PHP" />
+                                    <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
+                                </div>
                             </div>
+                        </div>
+                        <div className="project-description">
+                            <p>Esta es una breve descripción del proyecto.</p>
                         </div>
                     </div>
 
-                    <div
-                        className="project-card-image"
-                        style={{ backgroundImage: `url(${require('../assets/projects/laptop.png')})` }}
-                    >
-                        <div className="project-overlay">
-                            <h3>Acortador URLs</h3>
-                            <div className="tech-icons">
-                                <img src={require('../assets/tech/html5.png')} alt="HTML" />
-                                <img src={require('../assets/tech/tailwind.png')} alt="Tailwind" />
-                                <img src={require('../assets/tech/javascript.png')} alt="JavaScript" />
-                                <img src={require('../assets/tech/php.png')} alt="PHP" />
-                                <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
+                    {/*PROYECTO 3*/}
+                    <div className="project-card-image">
+                        <div
+                            className="image-container"
+                            style={{ backgroundImage: `url(${require('../assets/projects/laptop-taskly.png')})` }}
+                        >
+                            <div className="project-overlay">
+                                <h3>Acortador URLs</h3>
+                                <div className="tech-icons">
+                                    <img src={require('../assets/tech/html5.png')} alt="HTML" />
+                                    <img src={require('../assets/tech/tailwind.png')} alt="Tailwind" />
+                                    <img src={require('../assets/tech/javascript.png')} alt="JavaScript" />
+                                    <img src={require('../assets/tech/php.png')} alt="PHP" />
+                                    <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
+                                </div>
                             </div>
+                        </div>
+                        <div className="project-description">
+                            <p>Esta es una breve descripción del proyecto.</p>
                         </div>
                     </div>
 
-                    <div
-                        className="project-card-image"
-                        style={{ backgroundImage: `url(${require('../assets/projects/laptop.png')})` }}
-                    >
-                        <div className="project-overlay">
-                            <h3>GTA VI</h3>
-                            <div className="tech-icons">
-                                <img src={require('../assets/tech/html5.png')} alt="HTML" />
-                                <img src={require('../assets/tech/tailwind.png')} alt="Tailwind" />
-                                <img src={require('../assets/tech/javascript.png')} alt="JavaScript" />
-                                <img src={require('../assets/tech/php.png')} alt="PHP" />
-                                <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
+                    {/*PROYECTO 4*/}
+                    <div className="project-card-image">
+                        <div
+                            className="image-container"
+                            style={{ backgroundImage: `url(${require('../assets/projects/laptop-taskly.png')})` }}
+                        >
+                            <div className="project-overlay">
+                                <h3>GTA VI</h3>
+                                <div className="tech-icons">
+                                    <img src={require('../assets/tech/html5.png')} alt="HTML" />
+                                    <img src={require('../assets/tech/tailwind.png')} alt="Tailwind" />
+                                    <img src={require('../assets/tech/javascript.png')} alt="JavaScript" />
+                                    <img src={require('../assets/tech/php.png')} alt="PHP" />
+                                    <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
+                                </div>
                             </div>
                         </div>
+                        <div className="project-description">
+                            <p>Esta es una breve descripción del proyecto.</p>
+                        </div>
                     </div>
+
                 </div>
             </section>
 
