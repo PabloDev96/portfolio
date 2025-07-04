@@ -95,7 +95,7 @@ const Portfolio = ({ onBack }) => {
                             <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
                                 <FaLink />
                             </a>
-                            <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
+                            <a href="https://github.com/PabloDev96/GestorDeTareasTaskly" target="_blank" rel="noopener noreferrer" className="p-btn">
                                 <FaGithub />
                             </a>
                         </div>
