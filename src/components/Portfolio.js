@@ -138,7 +138,7 @@ const Portfolio = ({ onBack }) => {
                     <div className="project-card-image">
                         <div
                             className="image-container"
-                            style={{ backgroundImage: `url(${require('../assets/projects/laptop-taskly.png')})` }}
+                            style={{ backgroundImage: `url(${require('../assets/projects/laptop-in-progress.png')})` }}
                         >
                             <div className="project-overlay">
                                 <h3>Acortador URLs</h3>
@@ -151,14 +151,13 @@ const Portfolio = ({ onBack }) => {
                             </div>
                         </div>
                         <div className="project-description">
-                            <p>Herramienta web para acortar enlaces, generar redirecciones y contar clics. Desarrollada con Node.js, MongoDB y JS vanilla. Soporta QR, validación y gestión por usuario.
-
+                            <p>Herramienta web para acortar enlaces, generar redirecciones y contar clics. Desarrollada con Node.js, MongoDB y JS vanilla. Soporta QR, validación y gestión por usuario. <b>ACTUALMENTE TRABAJANDO EN ELLO </b>.
                             </p>
                             <div className="project-btns">
-                                <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                <a href="https://github.com/PabloDev96/portfolio" target="_blank" rel="noopener noreferrer" className="p-btn">
                                     <FaLink />
                                 </a>
-                                <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                <a href="https://github.com/PabloDev96/portfolio" target="_blank" rel="noopener noreferrer" className="p-btn">
                                     <FaGithub />
                                 </a>
                             </div>
@@ -276,8 +275,8 @@ const Portfolio = ({ onBack }) => {
             <section className="contact">
                 <p className="section-label">CONTACTO</p>
                 <h2>¿Trabajamos juntos?</h2>
-                <p>Email: pablo.diazgar@gmail.com</p>
-                <p>Teléfono: +34 659 103 719</p>
+                <p>Email: <a href="mailto:pablo.diazgar@gmail.com">pablo.diazgar@gmail.com</a></p>
+                <p>Teléfono: <a href="tel:+34659103719">+34 659 103 719</a></p>
             </section>
 
             <button className="back-btn" onClick={onBack}>Cambiar vista</button>

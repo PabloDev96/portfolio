@@ -11,8 +11,8 @@ function Landing({ onSelectOption }) {
       <h1>Hola, soy Pablo Díaz</h1>
       <h1>Bienvenido a mi Portfolio!</h1>
       <div className="landing-buttons">
-        <button onClick={() => onSelectOption('interactive')}>Versión Interactiva (Juego)</button>
         <button onClick={() => onSelectOption('basic')}>Versión Básica</button>
+        <button onClick={() => onSelectOption('interactive')}>Versión Interactiva (Juego)</button>        
       </div>
       <div className="icon-btns">
         <a href="/CV_PabloDíazGarcía.pdf" target="_blank" rel="noopener noreferrer" className="icon-btn cv">

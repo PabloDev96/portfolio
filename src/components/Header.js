@@ -16,7 +16,7 @@ const Header = () => {
           <div className="icon-buttons">
             <a
               href="/CV_PabloDíazGarcía.pdf"
-              download
+              target="_blank"
               className="icon-button cv"
             >
               <TbFileCv size={32} />

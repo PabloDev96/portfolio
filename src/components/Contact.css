@@ -1,0 +1,43 @@
+.contact-section {
+  padding: 40px 20px;
+  background-color: #0d1b24;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-title {
+  color: #00b894;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-card {
+  background-color: rgba(0, 184, 148, 0.08);
+  border: 2px solid #00b894;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 12px rgba(0, 184, 148, 0.3);
+  font-size: 0.8rem;
+  text-align: center;
+  color: #dcdcdc;
+}
+
+.contact-card p {
+  margin-bottom: 16px;
+}
+
+.copy-phone {
+  cursor: pointer;
+  color: #00b894;
+  }
+
+.copy-phone:hover {
+  text-decoration: underline;
+}

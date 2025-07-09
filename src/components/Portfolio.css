@@ -2,6 +2,7 @@
 
 p {
     text-align: justify;
+    font-size: 1rem;
 }
 
 .portfolio-container {
@@ -54,6 +55,16 @@ h2 {
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 224, 199, 0.5);
 }
+
+.hero .image-wrapper {
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto; /* si quieres empujarlo a la derecha */
+}
+
 
 .buttons {
     margin-top: 1.5rem;

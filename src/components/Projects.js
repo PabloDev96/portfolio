@@ -9,6 +9,8 @@ import htmlIcon from '../assets/tech/html5.png';
 import tailwindIcon from '../assets/tech/tailwind.png';
 import jsIcon from '../assets/tech/javascript.png';
 import phpIcon from '../assets/tech/php.png';
+import laravelIcon from '../assets/tech/laravel.png';
+import cssIcon from '../assets/tech/css3.png';
 import mysqlIcon from '../assets/tech/mysql.png';
 import reactIcon from '../assets/tech/react.png';
 
@@ -18,35 +20,21 @@ const projects = [
     title: 'Taskly',
     image: pcRetroTaskly,
     tech: [htmlIcon, tailwindIcon, jsIcon, phpIcon, mysqlIcon],
-    description: `Proyecto grupal donde me encargué del desarrollo del backend (creación de APIs para usuarios, proyectos y tareas) y de la integración en el frontend mediante los archivos de conexión.
+    description: `Proyecto grupal donde desarrollé el backend (APIs para usuarios, proyectos y tareas) e integré con el frontend. La app permite crear y gestionar proyectos y tareas con vista Kanban (drag and drop), login, registro y control de accesos por roles.`,
 
-La app permite crear proyectos y tareas asignadas a usuarios, con edición, eliminación y una vista Kanban con drag and drop para una gestión visual e intuitiva. Incluye sistema de login, registro y roles para controlar accesos y permisos.
-
-Desarrollado en equipo aplicando buenas prácticas y metodologías ágiles.`,
-
-    demo: 'https://demo-taskly.com',
+    demo: 'https://coral-mule-348004.hostingersite.com/',
     repo: 'https://github.com/PabloDev96/GestorDeTareasTaskly'
   },
   {
     id: 2,
-    title: 'Web de Adopción',
-    image: pcRetroAdopcion,
-    tech: [reactIcon, tailwindIcon, jsIcon],
-    description:
-      'Sitio responsive para adopción de mascotas, con panel de administración y diseño moderno.',
-    demo: 'https://demo-adopcion.com',
-    repo: 'https://github.com/usuario/web-adopcion'
-  },
-  {
-    id: 3,
     title: 'Acortador de URLs',
     image: pcRetroAcortador,
-    tech: [reactIcon, tailwindIcon, jsIcon],
+    tech: [htmlIcon, cssIcon, phpIcon, laravelIcon, mysqlIcon],
     description:
-      'Aplicación para acortar enlaces con historial, validación y vista dinámica.',
-    demo: 'https://demo-acortador.com',
-    repo: 'https://github.com/usuario/acortador'
-  }
+      'Aplicación para acortar enlaces con historial, validación y vista dinámica. ACTUALMENTE EN PROGRESO.',
+    demo: 'https://github.com/PabloDev96/PabloDev96',
+    repo: 'https://github.com/PabloDev96/PabloDev96'
+  },  
 ];
 
 const Projects = () => {
