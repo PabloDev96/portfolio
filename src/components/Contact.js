@@ -10,13 +10,13 @@ const Contact = () => {
 
       <div className="contact-card">
         <p>
-          Email:{' '}
+          <span className="label">Email:</span>{' '}
           <a href="mailto:pablo.diazgar@gmail.com">
             pablo.diazgar@gmail.com
           </a>
         </p>
         <p>
-          Teléfono:{' '}
+          <span className="label">Teléfono:</span>{' '}
           <span
             onClick={() => {
               navigator.clipboard.writeText('+34659103719');

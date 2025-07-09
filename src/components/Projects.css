@@ -31,7 +31,6 @@
     transition: all 0.4s ease;
     position: relative;
     background-color: rgba(0, 184, 148, 0.08);
-    /* verde suave translúcido */
     border: 2px solid #00b894;
     border-radius: 12px;
     padding: 20px;
@@ -53,7 +52,7 @@
 /* Overlay de tecnologías en el marco de la pantalla */
 .tech-overlay {
     position: absolute;
-    top: 19.5%;
+    top: 0%;
     left: 17.8%;
     width: 64.5%;
     height: 36.5%;
@@ -68,7 +67,7 @@
 }
 
 .tech-overlay img {
-    width: 28px;
+    width: 25px;
     height: auto;
     filter: drop-shadow(1px 1px 1px #000);
 }
@@ -88,8 +87,6 @@
     text-align: justify;
 }
 
-
-
 /* Hover: mover imagen y mostrar descripción */
 .retro-project:hover .image-and-description {
     justify-content: flex-start;
@@ -102,7 +99,6 @@
 .retro-project:hover .project-description {
     display: block;
 }
-
 
 .project-buttons {
   display: flex;
@@ -150,6 +146,13 @@
     }
 
     .image-wrapper {
+        width: 100%;
+        max-width: 320px;
+        transform: none !important;
+    }
+
+    /* Evita que se mueva la imagen en hover (solo móviles) */
+    .retro-project:hover .image-wrapper {
         transform: none !important;
     }
 
@@ -160,7 +163,6 @@
         margin-top: 1rem;
         text-align: justify;
     }
-
 
     .retro-project:hover .project-description {
         transform: none;

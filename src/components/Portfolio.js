@@ -28,8 +28,8 @@ const Portfolio = ({ onBack }) => {
         <div className="portfolio-container">
             <section className="hero">
                 <div className="text-content">
-                    <p className="section-label">DESARROLLADOR WEB</p>
                     <h1>Hola, soy <span className="highlight">Pablo Díaz</span></h1>
+                    <h2 className="section-label">DESARROLLADOR WEB</h2>                    
                     <p>Diseño y desarrollo aplicaciones web modernas, funcionales y con personalidad.</p>
                     <div className="icon-btns">
                         <a href="/CV_PabloDíazGarcía.pdf" target="_blank" rel="noopener noreferrer" className="icon-btn cv">
@@ -60,16 +60,14 @@ const Portfolio = ({ onBack }) => {
             </section>
 
             <section className="about">
-                <p className="section-label">SOBRE MÍ</p>
-                <h2>¿Quién soy?</h2>
+                <h2 className="section-label">SOBRE MÍ</h2>
                 <p>
                     Soy desarrollador web con enfoque FullStack y una fuerte motivación por seguir creciendo en este sector. Me apasiona crear soluciones funcionales y modernas que resuelvan problemas reales. Durante mi formación y experiencia práctica he trabajado con tecnologías como PHP, Java, MySQL, JavaScript y Tailwind, combinando conocimientos técnicos con una mentalidad proactiva y resolutiva. Actualmente me estoy especializando en frameworks como React y Spring Boot, con el objetivo de construir proyectos escalables y de alto impacto. Busco continuamente nuevos retos que me permitan aprender, aportar valor y evolucionar como profesional.
                 </p>
             </section>
 
             <section className="projects">
-                <p className="section-label">PROYECTOS</p>
-                <h2>¿En qué he trabajado?</h2>
+                <h2 className="section-label">PROYECTOS</h2>
                 <div className="project-grid">
 
                     {/*PROYECTO 1*/}
@@ -197,20 +195,18 @@ const Portfolio = ({ onBack }) => {
                 </div>
             </section>
 
-            <section className="services">
-                <p className="section-label">SERVICIOS</p>
-                <h2>¿Qué puedo hacer?</h2>
+            {/*<section className="services">
+                <h2 className="section-label">SERVICIOS</h2>
                 <div className="service-grid">
                     <div className="service-card">Diseño Web</div>
                     <div className="service-card">Aplicaciones React</div>
                     <div className="service-card">API REST y backend</div>
                     <div className="service-card">Edición y mantenimiento</div>
                 </div>
-            </section>
+            </section>*/}
 
             <section className="technologies-section">
-                <p className="section-label">TECNOLOGÍAS</p>
-                <h2>¿Cuáles manejo?</h2>
+                <h2 className="section-label">TECNOLOGÍAS QUE MANEJO</h2>
 
                 <div className="technologies">
                     <div className="tech-card">
@@ -257,8 +253,7 @@ const Portfolio = ({ onBack }) => {
             </section>
 
             <section className="learning-section">
-                <p className="section-label">ACTUALMENTE EN FORMACIÓN</p>
-                <h2>Ampliando conocimientos en:</h2>
+                <h2 className="section-label">ACTUALMENTE EN FORMACIÓN</h2>
 
                 <div className="learning">
                     <div className="learning-card">
@@ -273,8 +268,7 @@ const Portfolio = ({ onBack }) => {
             </section>
 
             <section className="contact">
-                <p className="section-label">CONTACTO</p>
-                <h2>¿Trabajamos juntos?</h2>
+                <h2 className="section-label">CONTACTO</h2>
                 <p>Email: <a href="mailto:pablo.diazgar@gmail.com">pablo.diazgar@gmail.com</a></p>
                 <p>Teléfono: <a href="tel:+34659103719">+34 659 103 719</a></p>
             </section>

@@ -41,3 +41,47 @@
 .copy-phone:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 12px;
+    font-size: 0.7rem !important;
+    width: 100%;
+    max-width: 95vw;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .label {
+  font-size: 0.7rem !important;
+  font-weight: normal;
+  color: #b0b0b0;
+}
+
+
+  
+  .contact-title {
+    font-size: 1.1rem;
+  }
+
+  .icon-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .icon-button svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .contact-card a,
+  .contact-card span {
+    word-break: break-word;
+    font-size: 0.65rem;
+  }
+}
+
