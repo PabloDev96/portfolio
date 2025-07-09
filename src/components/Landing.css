@@ -18,7 +18,10 @@
 .landing-container h1 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  margin-top: 0%;
 }
+
+
 
 .landing-buttons {
   display: flex;

@@ -4,7 +4,7 @@ import { FaLink } from "react-icons/fa6";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { TbFileCv } from "react-icons/tb";
 import htmlLogo from '../assets/tech/html5.png';
-import cssLogo from '../assets/tech/css3.png';
+import cssLogo from '../assets/tech/css3.png';  
 import tailwindLogo from '../assets/tech/tailwind.png';
 import jsLogo from '../assets/tech/javascript.png';
 import phpLogo from '../assets/tech/php.png';
@@ -90,20 +90,21 @@ const Portfolio = ({ onBack }) => {
                             </div>
                         </div>
                         <div className="project-description">
-                            <p>Proyecto grupal donde desarrollé el backend (APIs para usuarios, proyectos y tareas) e integré con el frontend. La app permite crear y gestionar proyectos y tareas con vista Kanban (drag and drop), login, registro y control de accesos por roles. Aplicamos buenas prácticas y metodologías ágiles.</p>
-                         <div className="project-btns">
-                            <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
-                                <FaLink />
-                            </a>
-                            <a href="https://github.com/PabloDev96/GestorDeTareasTaskly" target="_blank" rel="noopener noreferrer" className="p-btn">
-                                <FaGithub />
-                            </a>
+                            <p>Proyecto grupal donde desarrollé el backend (APIs para usuarios, proyectos y tareas) e integré con el frontend. La app permite crear y gestionar proyectos y tareas con vista Kanban (drag and drop), login, registro y control de accesos por roles.                                
+                            </p>
+                            <div className="project-btns">
+                                <a href="https://coral-mule-348004.hostingersite.com/" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                    <FaLink />
+                                </a>
+                                <a href="https://github.com/PabloDev96/GestorDeTareasTaskly" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                    <FaGithub />
+                                </a>
+                            </div>
                         </div>
-                        </div>                       
                     </div>
 
 
-                    {/*PROYECTO 2*/}
+                    {/*PROYECTO 2*
                     <div className="project-card-image">
                         <div
                             className="image-container"
@@ -122,18 +123,18 @@ const Portfolio = ({ onBack }) => {
                         </div>
                         <div className="project-description">
                             <p>App fullstack para publicar y buscar mascotas en adopción. Incluye filtros, perfiles, login/registro y carga de imágenes. Desarrollada con React, Node.js y MongoDB, enfocada en una experiencia accesible y responsive.</p>
-                         <div className="project-btns">
-                            <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
-                                <FaLink />
-                            </a>
-                            <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
-                                <FaGithub />
-                            </a>
+                            <div className="project-btns">
+                                <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                    <FaLink />
+                                </a>
+                                <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                    <FaGithub />
+                                </a>
+                            </div>
                         </div>
-                        </div>                       
-                    </div>
+                    </div> */}
 
-                    {/*PROYECTO 3*/}
+                    {/* PROYECTO 3 */}
                     <div className="project-card-image">
                         <div
                             className="image-container"
@@ -143,9 +144,8 @@ const Portfolio = ({ onBack }) => {
                                 <h3>Acortador URLs</h3>
                                 <div className="tech-icons">
                                     <img src={require('../assets/tech/html5.png')} alt="HTML" />
-                                    <img src={require('../assets/tech/tailwind.png')} alt="Tailwind" />
-                                    <img src={require('../assets/tech/javascript.png')} alt="JavaScript" />
-                                    <img src={require('../assets/tech/php.png')} alt="PHP" />
+                                    <img src={require('../assets/tech/css3.png')} alt="CSS" />
+                                    <img src={require('../assets/tech/laravel.png')} alt="Laravel" />
                                     <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
                                 </div>
                             </div>
@@ -153,19 +153,19 @@ const Portfolio = ({ onBack }) => {
                         <div className="project-description">
                             <p>Herramienta web para acortar enlaces, generar redirecciones y contar clics. Desarrollada con Node.js, MongoDB y JS vanilla. Soporta QR, validación y gestión por usuario.
 
-</p>
-                         <div className="project-btns">
-                            <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
-                                <FaLink />
-                            </a>
-                            <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
-                                <FaGithub />
-                            </a>
+                            </p>
+                            <div className="project-btns">
+                                <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                    <FaLink />
+                                </a>
+                                <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                    <FaGithub />
+                                </a>
+                            </div>
                         </div>
-                        </div>                       
-                    </div>
+                    </div> 
 
-                    {/*PROYECTO 4*/}
+                    {/* PROYECTO 4
                     <div className="project-card-image">
                         <div
                             className="image-container"
@@ -184,16 +184,16 @@ const Portfolio = ({ onBack }) => {
                         </div>
                         <div className="project-description">
                             <p>Página promocional ficticia de GTA VI con trailer, info del juego y suscripción por correo. Hecha en HTML, CSS y JS, con diseño responsive y animaciones visuales.</p>
-                         <div className="project-btns">
-                            <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
-                                <FaLink />
-                            </a>
-                            <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
-                                <FaGithub />
-                            </a>
+                            <div className="project-btns">
+                                <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                    <FaLink />
+                                </a>
+                                <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                    <FaGithub />
+                                </a>
+                            </div>
                         </div>
-                        </div>                       
-                    </div>
+                    </div> */}
 
                 </div>
             </section>
