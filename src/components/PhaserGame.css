@@ -1,0 +1,29 @@
+/* src/components/PhaserGame.css */
+
+.phaser-wrapper {
+  background-color: #5c94fc; /* cielo */
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  margin: 50px auto;
+  border: 4px solid #222;
+  border-radius: 8px;
+  box-shadow: 0 0 16px #000;
+  position: relative;
+  overflow: hidden;
+  image-rendering: pixelated;
+}
+
+.phaser-canvas-container {
+  width: 100%;
+  height: 100%;
+}
+
+.phaser-ground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 32px;
+  background-image: url("../assets/floorbricks.png");
+  background-repeat: repeat-x;
+}
