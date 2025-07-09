@@ -6,3 +6,79 @@
   display: inline-block;
   margin-bottom: 10px;
 }
+.about-section {
+  padding: 40px 20px;
+  background-color: #0d1b24;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+.section-title {
+  color: #00b894;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.info-card {
+  background-color: rgba(0, 184, 148, 0.08);
+  border: 2px solid #00b894;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 0 auto 40px auto;
+  box-shadow: 0 0 12px rgba(0, 184, 148, 0.3);
+  text-align: justify;
+   line-height: 1.6;
+
+  width: fit-content;
+  max-width: 800px;
+}
+
+.info-card p {
+  font-size: 0.75rem;
+}
+.info-card ul {
+  font-size: 0.75rem;
+}
+
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.tech-icon:hover {
+  transform: scale(1.25);
+}
+
+.tech-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+
+.info-card ul {
+  padding-left: 1rem;
+  list-style: disc;
+}
+
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}

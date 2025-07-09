@@ -1,49 +1,46 @@
-.header {
-  background-color: #006B56;
-  color: white;
+.header-section {
   padding: 40px 20px;
-  text-align: center;
-  border-bottom: 4px solid #00b894;
+  background-color: #0d1b24;
+  display: flex;
+  justify-content: center;
+}
+
+.header-card {
+  background-color: rgba(0, 184, 148, 0.08);
+  border: 2px solid #00b894;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 0 12px rgba(0, 184, 148, 0.3);
 }
 
 .header-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .profile-photo {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
-  /* círculo */
+  border-radius: 10%;
   border: 3px solid #00b894;
   margin-bottom: 20px;
   object-fit: cover;
 }
 
-.text-info h1{
+.text-info h1 {
   margin: 0;
-  font-size: 20px;
+  font-size: 1.3rem;
+  color: #00b894;
 }
+
 .text-info h2 {
-  
-}
-
-/* Responsive para escritorio */
-@media (min-width: 600px) {
-  .header-content {
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
-    text-align: left;
-  }
-
-  .profile-photo {
-    margin-bottom: 0;
-    width: 180px;
-    height: 180px;
-  }
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin: 10px 0;
 }
 
 .icon-buttons {
@@ -81,4 +78,24 @@
 .icon-button:hover.cv {
   color: #00b894;
   background-color: #fff;
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+  .header-content {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    text-align: left;
+  }
+
+  .profile-photo {
+    margin-bottom: 0;
+    width: 180px;
+    height: 180px;
+  }
+
+  .text-info {
+    text-align: left;
+  }
 }
