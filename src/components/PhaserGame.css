@@ -1,7 +1,10 @@
-/* src/components/PhaserGame.css */
+@font-face {
+  font-family: 'MarioFont';
+  src: url('../../public/fonts/SuperMario256.ttf') format('truetype');
+}
 
 .phaser-wrapper {
-  background-color: #5c94fc; /* cielo */
+  background-color: #5c94fc;
   width: 100%;
   max-width: 800px;
   height: 450px;

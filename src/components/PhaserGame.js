@@ -17,29 +17,68 @@ const PhaserGame = () => {
           frameWidth: 16,
           frameHeight: 16,
         });
+        this.load.spritesheet('coin', 'assets/coin.png', {
+          frameWidth: 16,
+          frameHeight: 16,
+        });
         this.load.image('floor', 'assets/floorbricks.png');
+        this.load.image('immovable', 'assets/immovableBlock.png');
+        this.load.image('cloud', 'assets/cloud1.png');
       }
 
-
       create() {
-        // Suelo visual y físico con bloques de ladrillo
         this.ground = this.physics.add.staticGroup();
-        const blockWidth = 32;
-        const groundY = 434;
-        for (let x = 0; x < 800; x += blockWidth) {
-          this.ground.create(x + blockWidth / 2, groundY, 'floor').setScale(1).refreshBody();
+        for (let x = 0; x < 800; x += 32) {
+          this.ground.create(x + 16, 434, 'floor').setScale(1).refreshBody();
         }
 
-        // Mario con físicas
+        // Nubes con texto animado
+        const cloudData = [
+          { x: 200, y: 130, text: 'SOBRE MI' },
+          { x: 400, y: 130, text: 'PROYECTOS' },
+          { x: 600, y: 130, text: 'CONTACTO' },
+        ];
+
+        cloudData.forEach(({ x, y, text }) => {
+          const cloud = this.add.image(x, y, 'cloud').setScale(0.55).setOrigin(0.5, 1);
+
+          const label = this.add.text(x, y - 25, text, {
+            fontFamily: 'MarioFont',
+            fontSize: '20px',
+            color: '#000000',
+            resolution: 1,
+          }).setOrigin(0.5);
+
+          
+
+          this.tweens.add({
+            targets: [cloud, label],
+            y: '+=8',
+            x: '+=5',
+            duration: 4000,
+            yoyo: true,
+            repeat: -1,
+            ease: 'Sine.easeInOut',
+          });
+        });
+
+        this.intermediatePlatform = this.physics.add.staticGroup();
+        [
+          { x: 150, y: 355 }, { x: 200, y: 305 }, { x: 250, y: 355 },
+          { x: 350, y: 355 }, { x: 400, y: 305 }, { x: 450, y: 355 },
+          { x: 550, y: 355 }, { x: 600, y: 305 }, { x: 650, y: 355 },
+        ].forEach(({ x, y }) => {
+          this.intermediatePlatform.create(x, y, 'immovable').setScale(1).refreshBody();
+        });
+
         this.player = this.physics.add.sprite(400, 400, 'mario', 0).setScale(1);
         this.player.setCollideWorldBounds(true);
         this.player.setBounce(0);
         this.physics.add.collider(this.player, this.ground);
-
-        this.player.setOrigin(0., 1);
+        this.physics.add.collider(this.player, this.intermediatePlatform);
+        this.player.setOrigin(0, 1);
         this.player.body.setSize(20, 20).setOffset(-2, -4);
 
-        // Animaciones de Mario
         this.anims.create({
           key: 'walk',
           frames: this.anims.generateFrameNumbers('mario', { frames: [1, 2, 3, 2] }),
@@ -53,84 +92,110 @@ const PhaserGame = () => {
           frameRate: 1,
         });
 
+        this.anims.create({
+          key: 'coinSpin',
+          frames: this.anims.generateFrameNumbers('coin', { start: 0, end: 3 }),
+          frameRate: 10,
+          repeat: -1,
+        });
 
-        // Input del teclado
         this.cursors = this.input.keyboard.createCursorKeys();
 
-        // Bloques misteriosos
-        this.blocks = this.physics.add.staticGroup();
+        this.blocks = this.physics.add.group();
         const blockData = [
-          { x: 300, y: 350, text: 'Sobre mí' },
-          { x: 400, y: 350, text: 'Proyectos' },
-          { x: 500, y: 350, text: 'Contacto' },
+          { x: 200, y: 225 },
+          { x: 400, y: 225 },
+          { x: 600, y: 225 },
         ];
 
-        this.blockTextMap = new Map();
-
-        blockData.forEach(({ x, y, text }) => {
-          const block = this.blocks.create(x, y, 'block', 0);
-          const label = this.add.text(x, y - 40, '', {
-            font: '14px monospace',
-            fill: '#ffffff',
-            backgroundColor: '#000000aa',
-            padding: { x: 6, y: 2 },
-          }).setOrigin(0.5).setVisible(false);
-
-          this.blockTextMap.set(block, label);
+        blockData.forEach(({ x, y }) => {
+          const block = this.physics.add.sprite(x, y, 'block', 0);
+          block.setImmovable(true);
+          block.body.setAllowGravity(false);
+          block.body.moves = false;
+          block.alreadyHit = false;
+          this.blocks.add(block);
         });
 
         this.physics.add.collider(this.player, this.blocks, this.hitBlock, null, this);
       }
 
       hitBlock(player, block) {
-        if (player.body.velocity.y < 0 && player.body.touching.up && block.body.touching.down) {
-          const label = this.blockTextMap.get(block);
-          if (label) {
-            label.setVisible(true);
-            this.time.delayedCall(2000, () => {
-              label.setVisible(false);
-            });
-          }
+        if (
+          player.body.velocity.y < 0 &&
+          player.body.touching.up &&
+          block.body.touching.down &&
+          !block.alreadyHit
+        ) {
+          block.alreadyHit = true;
+
+          const originalY = block.y;
+          const frames = [0, 1, 2];
+          let i = 0;
+
+          this.time.addEvent({
+            delay: 80,
+            repeat: frames.length - 1,
+            callback: () => {
+              block.setFrame(frames[i]);
+              i++;
+            }
+          });
+
+          this.tweens.add({
+            targets: block,
+            y: originalY - 6,
+            duration: 80,
+            yoyo: true,
+            ease: 'Power1',
+            onComplete: () => {
+              block.y = originalY;
+              this.time.delayedCall(80 * frames.length, () => {
+                block.setFrame(2);
+              });
+            }
+          });
+
+          // Crear y animar la moneda
+          const coin = this.add.sprite(block.x, block.y - 16, 'coin').setScale(1);
+          coin.play('coinSpin');
+
+          this.tweens.add({
+            targets: coin,
+            y: coin.y - 20,
+            alpha: 0,
+            duration: 400,
+            ease: 'Power1',
+            onComplete: () => coin.destroy()
+          });
         }
       }
 
       update() {
-        // Movimiento lateral
         if (this.cursors.left.isDown) {
           this.player.setVelocityX(-160);
           this.player.flipX = true;
-
-          if (this.player.body.onFloor()) {
-            this.player.anims.play('walk', true);
-          }
+          if (this.player.body.onFloor()) this.player.anims.play('walk', true);
         } else if (this.cursors.right.isDown) {
           this.player.setVelocityX(160);
           this.player.flipX = false;
-
-          if (this.player.body.onFloor()) {
-            this.player.anims.play('walk', true);
-          }
+          if (this.player.body.onFloor()) this.player.anims.play('walk', true);
         } else {
           this.player.setVelocityX(0);
-
           if (this.player.body.onFloor()) {
             this.player.anims.stop();
             this.player.setFrame(0);
           }
         }
 
-        // Salto (desde el suelo)
         if (this.cursors.up.isDown && this.player.body.onFloor()) {
           this.player.setVelocityY(-350);
           this.player.anims.play('jump', true);
         }
 
-        // Si está en el aire (cayendo o subiendo) y no se reproduce 'jump', forzarla
         if (!this.player.body.onFloor() && this.player.anims.currentAnim?.key !== 'jump') {
           this.player.anims.play('jump', true);
         }
-
-
       }
     }
 
@@ -147,6 +212,9 @@ const PhaserGame = () => {
           gravity: { y: 800 },
           debug: false,
         },
+      },
+      render: {
+        antialias: true,
       },
       audio: { noAudio: true },
     };
