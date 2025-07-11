@@ -8,12 +8,17 @@ import Contact from './components/Contact';
 import Landing from './components/Landing';
 import Portfolio from './components/Portfolio';
 import PhaserGame from './components/PhaserGame';
+import { useCallback } from 'react';
 
 
 function App() {
-  const [section, setSection] = useState('landing'); // opciones: 'landing', 'game', 'supermario', 'basic', 'about', 'projects', 'contact'
+  const [section, setSection] = useState('landing');
 
   const goToLanding = () => setSection('landing');
+
+  const goToSection = useCallback((targetSection) => {
+    setSection(targetSection);
+  }, []);
 
   useEffect(() => {
     const handleGoToLanding = () => setSection('landing');
@@ -30,7 +35,7 @@ function App() {
       window.removeEventListener('goToSection', handleGoToSection);
     };
   }, []);
-  
+
 
   return (
     <>
@@ -45,7 +50,7 @@ function App() {
       )}
 
       {section === 'game' && (
-        <IntroGame onGameEnd={setSection} onBack={goToLanding} />
+        <IntroGame onGameEnd={goToSection} onBack={goToLanding} />
       )}
 
       {section === 'supermario' && (

@@ -46,21 +46,18 @@ export default function IntroGame({ onGameEnd, onBack }) {
       canvas.width = window.innerWidth * 0.95;
       canvas.height = window.innerHeight * 0.8;
 
-      // Reescalar la nave proporcionalmente
       if (lastCanvasWidthRef.current !== null) {
         const ratio = canvas.width / lastCanvasWidthRef.current;
         setX((prevX) => prevX * ratio);
       }
       lastCanvasWidthRef.current = canvas.width;
 
-      // Escalado de sprites
       const baseWidth = canvas.width;
       const isMobile = window.innerWidth < 600;
 
       const shipW = baseWidth * (isMobile ? 0.22 : 0.11);
       const shipH = shipW;
-
-      const alienW = baseWidth * (isMobile ? 0.18 : 0.09); // marcianos más grandes en móvil, más pequeños en escritorio
+      const alienW = baseWidth * (isMobile ? 0.18 : 0.09);
       const alienH = alienW;
 
       setSpriteSize({
@@ -71,7 +68,8 @@ export default function IntroGame({ onGameEnd, onBack }) {
       });
     };
 
-    resizeCanvas();
+    setTimeout(resizeCanvas, 0);
+
     window.addEventListener('resize', resizeCanvas);
 
     const draw = () => {
@@ -130,12 +128,12 @@ export default function IntroGame({ onGameEnd, onBack }) {
       cancelAnimationFrame(animationId);
       window.removeEventListener('resize', resizeCanvas);
     };
-  }, [bullets, x, explosions, onGameEnd, spriteSize]);
+  }, [bullets, x, explosions, spriteSize]);
 
   useEffect(() => {
     const handleKey = (e) => {
       const canvas = canvasRef.current;
-      const NAV_SPEED = canvas.width * 0.02; // 2% del ancho del canvas
+      const NAV_SPEED = canvas.width * 0.02;
 
       if (e.key === 'ArrowLeft') {
         setX((prev) => Math.max(0, prev - NAV_SPEED));
@@ -157,7 +155,6 @@ export default function IntroGame({ onGameEnd, onBack }) {
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
   }, [x, spriteSize]);
-
 
   const moveLeft = () => {
     const canvas = canvasRef.current;
@@ -181,8 +178,6 @@ export default function IntroGame({ onGameEnd, onBack }) {
       },
     ]);
   };
-
-
 
   const holdIntervalRef = useRef(null);
 
@@ -253,9 +248,7 @@ export default function IntroGame({ onGameEnd, onBack }) {
             <BsArrowRightSquareFill size={60} />
           </button>
         </div>
-
       </div>
-
     </div>
   );
 }
