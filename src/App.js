@@ -17,11 +17,20 @@ function App() {
 
   useEffect(() => {
     const handleGoToLanding = () => setSection('landing');
+    const handleGoToSection = (e) => {
+      const section = e.detail;
+      setSection(section);
+    };
+
     window.addEventListener('goToLanding', handleGoToLanding);
+    window.addEventListener('goToSection', handleGoToSection);
+
     return () => {
       window.removeEventListener('goToLanding', handleGoToLanding);
+      window.removeEventListener('goToSection', handleGoToSection);
     };
   }, []);
+  
 
   return (
     <>

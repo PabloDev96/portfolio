@@ -27,7 +27,7 @@ const PhaserGame = () => {
       }
 
       create() {
-        
+
         this.ground = this.physics.add.staticGroup();
         for (let x = 0; x < 800; x += 32) {
           this.ground.create(x + 16, 434, 'floor').setScale(1).refreshBody();
@@ -157,10 +157,8 @@ const PhaserGame = () => {
             }
           });
 
-          // Crear y animar la moneda
           const coin = this.add.sprite(block.x, block.y - 16, 'coin').setScale(1);
           coin.play('coinSpin');
-
           this.tweens.add({
             targets: coin,
             y: coin.y - 20,
@@ -169,8 +167,20 @@ const PhaserGame = () => {
             ease: 'Power1',
             onComplete: () => coin.destroy()
           });
+
+          const sectionMap = {
+            200: 'about',
+            400: 'projects',
+            600: 'contact',
+          };
+
+          const targetSection = sectionMap[block.x];
+          if (targetSection) {
+            window.dispatchEvent(new CustomEvent('goToSection', { detail: targetSection }));
+          }
         }
       }
+
 
       update() {
         if (this.cursors.left.isDown) {
