@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { FaArrowLeft } from "react-icons/fa";
 import IntroGame from './components/IntroGame';
 import Header from './components/Header';
 import About from './components/About';
@@ -13,6 +14,14 @@ function App() {
   const [section, setSection] = useState('landing'); // opciones: 'landing', 'game', 'supermario', 'basic', 'about', 'projects', 'contact'
 
   const goToLanding = () => setSection('landing');
+
+  useEffect(() => {
+    const handleGoToLanding = () => setSection('landing');
+    window.addEventListener('goToLanding', handleGoToLanding);
+    return () => {
+      window.removeEventListener('goToLanding', handleGoToLanding);
+    };
+  }, []);
 
   return (
     <>
@@ -31,30 +40,35 @@ function App() {
       )}
 
       {section === 'supermario' && (
-        <PhaserGame />
+        <>
+          <button className="back-button-fixed" onClick={goToLanding}>
+            <FaArrowLeft />
+          </button>
+          <PhaserGame />
+        </>
       )}
-      
+
       {section === 'basic' && <Portfolio onBack={goToLanding} />}
 
       {section === 'about' && (
         <>
           <Header />
           <About />
-          <button className="back-button" onClick={goToLanding}>Volver al inicio</button>
+          <button className="back-button-fixed" onClick={goToLanding}><FaArrowLeft /></button>
         </>
       )}
 
       {section === 'projects' && (
         <>
           <Projects />
-          <button className="back-button" onClick={goToLanding}>Volver al inicio</button>
+          <button className="back-button-fixed" onClick={goToLanding}><FaArrowLeft /></button>
         </>
       )}
 
       {section === 'contact' && (
         <>
           <Contact />
-          <button className="back-button" onClick={goToLanding}>Volver al inicio</button>
+          <button className="back-button-fixed" onClick={goToLanding}><FaArrowLeft /></button>
         </>
       )}
     </>

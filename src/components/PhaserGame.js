@@ -27,6 +27,7 @@ const PhaserGame = () => {
       }
 
       create() {
+        
         this.ground = this.physics.add.staticGroup();
         for (let x = 0; x < 800; x += 32) {
           this.ground.create(x + 16, 434, 'floor').setScale(1).refreshBody();
@@ -49,7 +50,7 @@ const PhaserGame = () => {
             resolution: 1,
           }).setOrigin(0.5);
 
-          
+
 
           this.tweens.add({
             targets: [cloud, label],

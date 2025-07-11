@@ -2,8 +2,15 @@ import React from 'react';
 import './Contact.css'; // puedes unificarlo con Projects.css si prefieres
 import { TbFileCv } from "react-icons/tb";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaArrowUp } from "react-icons/fa";
 
 const Contact = () => {
+
+  {/*NO ES NECESARIO EL BOTON DE SCROLL UP
+     const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }; */}
+
   return (
     <section className="contact-section">
       <h2 className="contact-title">Contacto</h2>
@@ -44,7 +51,8 @@ const Contact = () => {
           <FaGithub size={32} />
         </a>
       </div>
-
+      {/*NO ES NECESARIO EL BOTON DE SCROLL UP
+      <button className="up-btn" onClick={scrollToTop}><FaArrowUp /></button> */}
     </section>
   );
 };

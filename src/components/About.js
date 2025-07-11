@@ -12,8 +12,15 @@ import apacheLogo from '../assets/tech/apache.png';
 import laravelLogo from '../assets/tech/laravel.png';
 import reactLogo from '../assets/tech/react.png';
 import springLogo from '../assets/tech/spring.png';
+import { FaArrowUp } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 
 const About = () => {
+
+  const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    
   return (
     <section className="about-section">
       <h2 className="section-title">Sobre mí</h2>
@@ -73,6 +80,7 @@ const About = () => {
           <img src={springLogo} alt="HTML" />
         </div>
       </div>
+      <button className="up-btn" onClick={scrollToTop}><FaArrowUp /></button>
     </section>
   );
 };

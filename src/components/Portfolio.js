@@ -17,6 +17,7 @@ import springLogo from '../assets/tech/spring.png';
 import javaLogo from '../assets/tech/java.png';
 import laptopImg from '../assets/projects/laptop.png';
 import { FaArrowUp } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 
 const Portfolio = ({ onBack }) => {
 
@@ -273,7 +274,7 @@ const Portfolio = ({ onBack }) => {
                 <p>Teléfono: <a href="tel:+34659103719">+34 659 103 719</a></p>
             </section>
 
-            <button className="back-btn" onClick={onBack}>Cambiar vista</button>
+            <button className="back-btn" onClick={onBack}><FaArrowLeft /></button>
             <button className="up-btn" onClick={scrollToTop}><FaArrowUp /></button>
         </div>
     );

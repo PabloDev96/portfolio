@@ -13,6 +13,8 @@ import laravelIcon from '../assets/tech/laravel.png';
 import cssIcon from '../assets/tech/css3.png';
 import mysqlIcon from '../assets/tech/mysql.png';
 import reactIcon from '../assets/tech/react.png';
+import { FaArrowUp } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 
 const projects = [
   {
@@ -38,6 +40,10 @@ const projects = [
 ];
 
 const Projects = () => {
+
+  const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }; 
   return (
     <section className="projects-section">
       <h2 className="section-title">Proyectos</h2>
@@ -69,6 +75,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
+      <button className="up-btn" onClick={scrollToTop}><FaArrowUp /></button>
     </section>
   );
 };
