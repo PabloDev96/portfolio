@@ -150,7 +150,7 @@ const Portfolio = ({ onBack }) => {
                             </div>
                         </div>
                         <div className="project-description">
-                            <p>Herramienta web para acortar enlaces, generar redirecciones y contar clics. Desarrollada con Node.js, MongoDB y JS vanilla. Soporta QR, validación y gestión por usuario. <b>ACTUALMENTE TRABAJANDO EN ELLO </b>.
+                            <p>Aplicación para acortar enlaces con historial, validación y vista dinámica. <b>ACTUALMENTE TRABAJANDO EN ELLO </b>.
                             </p>
                             <div className="project-btns">
                                 <a href="https://github.com/PabloDev96/portfolio" target="_blank" rel="noopener noreferrer" className="p-btn">
