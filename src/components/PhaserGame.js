@@ -11,8 +11,8 @@ const PhaserGame = () => {
     inputRef.current[direction] = true;
   };
 
-  const handleStop = () => {
-    inputRef.current = { left: false, right: false, jump: false };
+  const handleStop = (direction) => {
+    inputRef.current[direction] = false;
   };
 
   useEffect(() => {
@@ -254,13 +254,31 @@ const PhaserGame = () => {
     <div className="phaser-wrapper">
       <div ref={gameContainerRef} className="phaser-canvas-container" />
       <div className="mobile-controls">
-        <button className="btn left" onTouchStart={() => handleTouch('left')} onTouchEnd={handleStop}>←</button>
-        <button className="btn right" onTouchStart={() => handleTouch('right')} onTouchEnd={handleStop}>→</button>
-        <button className="btn jump" onTouchStart={() => handleTouch('jump')} onTouchEnd={handleStop}>⤒</button>
-      </div>
+  <button
+    className="btn left"
+    onTouchStart={() => handleTouch('left')}
+    onTouchEnd={() => handleStop('left')}
+  >
+    ←
+  </button>
+  <button
+    className="btn jump"
+    onTouchStart={() => handleTouch('jump')}
+    onTouchEnd={() => handleStop('jump')}
+  >
+    ↑
+  </button>
+  <button
+    className="btn right"
+    onTouchStart={() => handleTouch('right')}
+    onTouchEnd={() => handleStop('right')}
+  >
+    →
+  </button>
+</div>
+
     </div>
   );
 };
 
 export default PhaserGame;
-  
