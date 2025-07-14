@@ -5,6 +5,15 @@ import './PhaserGame.css';
 
 const PhaserGame = () => {
   const gameContainerRef = useRef(null);
+  const inputRef = useRef({ left: false, right: false, jump: false });
+
+  const handleTouch = (direction) => {
+    inputRef.current[direction] = true;
+  };
+
+  const handleStop = () => {
+    inputRef.current = { left: false, right: false, jump: false };
+  };
 
   useEffect(() => {
     class MainScene extends Phaser.Scene {
@@ -27,13 +36,13 @@ const PhaserGame = () => {
       }
 
       create() {
+        this.inputRef = MainScene.prototype.inputRef;
 
         this.ground = this.physics.add.staticGroup();
         for (let x = 0; x < 800; x += 32) {
           this.ground.create(x + 16, 434, 'floor').setScale(1).refreshBody();
         }
 
-        // Nubes con texto animado
         const cloudData = [
           { x: 200, y: 130, text: 'SOBRE MI' },
           { x: 400, y: 130, text: 'PROYECTOS' },
@@ -42,15 +51,12 @@ const PhaserGame = () => {
 
         cloudData.forEach(({ x, y, text }) => {
           const cloud = this.add.image(x, y, 'cloud').setScale(0.55).setOrigin(0.5, 1);
-
           const label = this.add.text(x, y - 25, text, {
             fontFamily: 'MarioFont',
             fontSize: '20px',
             color: '#000000',
             resolution: 1,
           }).setOrigin(0.5);
-
-
 
           this.tweens.add({
             targets: [cloud, label],
@@ -181,13 +187,14 @@ const PhaserGame = () => {
         }
       }
 
-
       update() {
-        if (this.cursors.left.isDown) {
+        const input = this.inputRef;
+
+        if (this.cursors.left.isDown || input.left) {
           this.player.setVelocityX(-160);
           this.player.flipX = true;
           if (this.player.body.onFloor()) this.player.anims.play('walk', true);
-        } else if (this.cursors.right.isDown) {
+        } else if (this.cursors.right.isDown || input.right) {
           this.player.setVelocityX(160);
           this.player.flipX = false;
           if (this.player.body.onFloor()) this.player.anims.play('walk', true);
@@ -199,7 +206,7 @@ const PhaserGame = () => {
           }
         }
 
-        if (this.cursors.up.isDown && this.player.body.onFloor()) {
+        if ((this.cursors.up.isDown || input.jump) && this.player.body.onFloor()) {
           this.player.setVelocityY(-350);
           this.player.anims.play('jump', true);
         }
@@ -210,10 +217,16 @@ const PhaserGame = () => {
       }
     }
 
+    MainScene.prototype.inputRef = inputRef.current;
+
     const config = {
       type: Phaser.AUTO,
-      width: 800,
-      height: 450,
+      scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: 800,
+        height: 450,
+      },
       parent: gameContainerRef.current,
       backgroundColor: '#5c94fc',
       scene: MainScene,
@@ -240,9 +253,14 @@ const PhaserGame = () => {
   return (
     <div className="phaser-wrapper">
       <div ref={gameContainerRef} className="phaser-canvas-container" />
-      <div className="phaser-ground" />
+      <div className="mobile-controls">
+        <button className="btn left" onTouchStart={() => handleTouch('left')} onTouchEnd={handleStop}>←</button>
+        <button className="btn right" onTouchStart={() => handleTouch('right')} onTouchEnd={handleStop}>→</button>
+        <button className="btn jump" onTouchStart={() => handleTouch('jump')} onTouchEnd={handleStop}>⤒</button>
+      </div>
     </div>
   );
 };
 
 export default PhaserGame;
+  

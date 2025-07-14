@@ -7,7 +7,7 @@
   background-color: #5c94fc;
   width: 100%;
   max-width: 800px;
-  height: 450px;
+  aspect-ratio: 16 / 9;
   margin: 50px auto;
   border: 4px solid #222;
   border-radius: 8px;
@@ -17,18 +17,10 @@
   image-rendering: pixelated;
 }
 
+
 .phaser-canvas-container {
   width: 100%;
   height: 100%;
-}
-
-.phaser-ground {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 32px;
-  background-image: url("../assets/floorbricks.png");
-  background-repeat: repeat-x;
 }
 
 .back-button-fixed {
@@ -54,3 +46,31 @@
   transform: scale(1.1);
 }
 
+.mobile-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 20px;
+}
+
+.mobile-controls .btn {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 24px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  touch-action: none;
+  backdrop-filter: blur(4px);
+}
+
+@media (min-width: 768px) {
+  .mobile-controls {
+    display: none;
+  }
+}
