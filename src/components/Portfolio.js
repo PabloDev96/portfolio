@@ -31,7 +31,7 @@ const Portfolio = ({ onBack }) => {
                 <div className="text-content">
                     <h1>Hola, soy <span className="highlight">Pablo Díaz</span></h1>
                     <h2 className="section-label">DESARROLLADOR WEB</h2>                    
-                    <p>Diseño y desarrollo aplicaciones web modernas, funcionales y con personalidad.</p>
+                    <p className="parrafo-portfolio">Diseño y desarrollo aplicaciones web modernas, funcionales y con personalidad.</p>
                     <div className="icon-btns">
                         <a href="/CV_PabloDíazGarcía.pdf" target="_blank" rel="noopener noreferrer" className="icon-btn cv">
                             <TbFileCv size={32} />
@@ -62,7 +62,7 @@ const Portfolio = ({ onBack }) => {
 
             <section className="about">
                 <h2 className="section-label">SOBRE MÍ</h2>
-                <p>
+                <p className="parrafo-portfolio">
                     Soy desarrollador web con enfoque FullStack y una fuerte motivación por seguir creciendo en este sector. Me apasiona crear soluciones funcionales y modernas que resuelvan problemas reales. Durante mi formación y experiencia práctica he trabajado con tecnologías como PHP, Java, MySQL, JavaScript y Tailwind, combinando conocimientos técnicos con una mentalidad proactiva y resolutiva. Actualmente me estoy especializando en frameworks como React y Spring Boot, con el objetivo de construir proyectos escalables y de alto impacto. Busco continuamente nuevos retos que me permitan aprender, aportar valor y evolucionar como profesional.
                 </p>
             </section>
@@ -89,7 +89,7 @@ const Portfolio = ({ onBack }) => {
                             </div>
                         </div>
                         <div className="project-description">
-                            <p>Proyecto grupal donde desarrollé el backend (APIs para usuarios, proyectos y tareas) e integré con el frontend. La app permite crear y gestionar proyectos y tareas con vista Kanban (drag and drop), login, registro y control de accesos por roles.                                
+                            <p className="parrafo-portfolio">Proyecto grupal donde desarrollé el backend (APIs para usuarios, proyectos y tareas) e integré con el frontend. La app permite crear y gestionar proyectos y tareas con vista Kanban (drag and drop), login, registro y control de accesos por roles.                                
                             </p>
                             <div className="project-btns">
                                 <a href="https://coral-mule-348004.hostingersite.com/" target="_blank" rel="noopener noreferrer" className="p-btn">
@@ -121,7 +121,7 @@ const Portfolio = ({ onBack }) => {
                             </div>
                         </div>
                         <div className="project-description">
-                            <p>App fullstack para publicar y buscar mascotas en adopción. Incluye filtros, perfiles, login/registro y carga de imágenes. Desarrollada con React, Node.js y MongoDB, enfocada en una experiencia accesible y responsive.</p>
+                            <p className="parrafo-portfolio">App fullstack para publicar y buscar mascotas en adopción. Incluye filtros, perfiles, login/registro y carga de imágenes. Desarrollada con React, Node.js y MongoDB, enfocada en una experiencia accesible y responsive.</p>
                             <div className="project-btns">
                                 <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
                                     <FaLink />
@@ -150,7 +150,7 @@ const Portfolio = ({ onBack }) => {
                             </div>
                         </div>
                         <div className="project-description">
-                            <p>Herramienta web para acortar enlaces, generar redirecciones y contar clics. Desarrollada con Node.js, MongoDB y JS vanilla. Soporta QR, validación y gestión por usuario. <b>ACTUALMENTE TRABAJANDO EN ELLO </b>.
+                            <p className="parrafo-portfolio">Aplicación para acortar enlaces con historial, validación y vista dinámica. <b>ACTUALMENTE TRABAJANDO EN ELLO </b>.
                             </p>
                             <div className="project-btns">
                                 <a href="https://github.com/PabloDev96/portfolio" target="_blank" rel="noopener noreferrer" className="p-btn">
@@ -181,7 +181,7 @@ const Portfolio = ({ onBack }) => {
                             </div>
                         </div>
                         <div className="project-description">
-                            <p>Página promocional ficticia de GTA VI con trailer, info del juego y suscripción por correo. Hecha en HTML, CSS y JS, con diseño responsive y animaciones visuales.</p>
+                            <p className="parrafo-portfolio">Página promocional ficticia de GTA VI con trailer, info del juego y suscripción por correo. Hecha en HTML, CSS y JS, con diseño responsive y animaciones visuales.</p>
                             <div className="project-btns">
                                 <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
                                     <FaLink />
@@ -270,8 +270,8 @@ const Portfolio = ({ onBack }) => {
 
             <section className="contact">
                 <h2 className="section-label">CONTACTO</h2>
-                <p>Email: <a href="mailto:pablo.diazgar@gmail.com">pablo.diazgar@gmail.com</a></p>
-                <p>Teléfono: <a href="tel:+34659103719">+34 659 103 719</a></p>
+                <p className="parrafo-portfolio">Email: <a href="mailto:pablo.diazgar@gmail.com">pablo.diazgar@gmail.com</a></p>
+                <p className="parrafo-portfolio">Teléfono: <a href="tel:+34659103719">+34 659 103 719</a></p>
             </section>
 
             <button className="back-btn" onClick={onBack}><FaArrowLeft /></button>

@@ -1,11 +1,8 @@
 import React from 'react';
-import './About.css'
-import './Projects.css';
+import './MarioStyle.css';
 import { FaLink, FaGithub } from "react-icons/fa6";
-import pcRetroTaskly from '../assets/projects/pcretro-taskly.png';
-import pcRetroAdopcion from '../assets/projects/pcretro-webadopcion.png';
-import pcRetroAcortador from '../assets/projects/pcretro-acortador.png';
-
+import gameboyTaskly from '../assets/projects/gameboy-taskly.png';
+import gameboyURL from '../assets/projects/gameboy-url.png';
 import htmlIcon from '../assets/tech/html5.png';
 import tailwindIcon from '../assets/tech/tailwind.png';
 import jsIcon from '../assets/tech/javascript.png';
@@ -21,7 +18,7 @@ const projects = [
   {
     id: 1,
     title: 'Taskly',
-    image: pcRetroTaskly,
+    image: gameboyTaskly,
     tech: [htmlIcon, tailwindIcon, jsIcon, phpIcon, mysqlIcon],
     description: `Proyecto grupal donde desarrollé el backend (APIs para usuarios, proyectos y tareas) e integré con el frontend. La app permite crear y gestionar proyectos y tareas con vista Kanban (drag and drop), login, registro y control de accesos por roles.`,
 
@@ -31,43 +28,38 @@ const projects = [
   {
     id: 2,
     title: 'Acortador de URLs',
-    image: pcRetroAcortador,
+    image: gameboyURL,
     tech: [htmlIcon, cssIcon, phpIcon, laravelIcon, mysqlIcon],
     description:
       'Aplicación para acortar enlaces con historial, validación y vista dinámica. ACTUALMENTE EN PROGRESO.',
     demo: 'https://github.com/PabloDev96/PabloDev96',
     repo: 'https://github.com/PabloDev96/PabloDev96'
-  },  
+  },
 ];
 
 const Projects = () => {
 
   const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }; 
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
-    <section className="projects-section">
-      <h2 className="section-title">Proyectos</h2>
+    <section className="mario-section">
+      <h2 className="mario-title">Proyectos</h2>
 
-      <div className="project-list">
+      <div className="mario-project">
         {projects.map((project) => (
-          <div key={project.id} className="retro-project">
-            <div className="image-and-description">
-              <div className="image-wrapper">
-                <img src={project.image} alt={project.title} className="retro-image" />
-                <div className="tech-overlay">
-                  {project.tech.map((icon, i) => (
-                    <img key={i} src={icon} alt="Tech" />
-                  ))}
-                </div>
+          <div key={project.id} className="mario-retro-project">
+            <div className="mario-image-and-description">
+              <div className="mario-image-wrapper">
+                <img src={project.image} alt={project.title} className="mario-retro-image" />
               </div>
-              <div className="project-description">
+              <div className="mario-hover-description">
                 <p>{project.description}</p>
-                <div className="project-buttons">
-                  <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-btn">
+                <div className="mario-project-buttons">
+                  <a href={project.demo} target="_blank" rel="noopener noreferrer" className="mario-project-btn">
                     <FaLink />
                   </a>
-                  <a href={project.repo} target="_blank" rel="noopener noreferrer" className="project-btn">
+                  <a href={project.repo} target="_blank" rel="noopener noreferrer" className="mario-project-btn">
                     <FaGithub />
                   </a>
                 </div>

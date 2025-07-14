@@ -5,8 +5,7 @@ import naveImg from '../assets/nave.png';
 import marcianoAbout from '../assets/marcianoSobreMi.png';
 import marcianoProjects from '../assets/marcianoProyectos.png';
 import Contacto from '../assets/marcianoContacto.png';
-import { FaArrowLeft } from "react-icons/fa";
-import { BsArrowLeftSquareFill, BsArrowRightSquareFill } from "react-icons/bs";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { SlTarget } from "react-icons/sl";
 
 export default function IntroGame({ onGameEnd, onBack }) {
@@ -223,7 +222,7 @@ export default function IntroGame({ onGameEnd, onBack }) {
             onTouchStart={() => startHold(moveLeft)}
             onTouchEnd={stopHold}
           >
-            <BsArrowLeftSquareFill size={60} />
+            <FaArrowLeft className="control-icon" />
           </button>
 
           <button
@@ -245,7 +244,7 @@ export default function IntroGame({ onGameEnd, onBack }) {
             onTouchStart={() => startHold(moveRight)}
             onTouchEnd={stopHold}
           >
-            <BsArrowRightSquareFill size={60} />
+            <FaArrowRight className="control-icon" />
           </button>
         </div>
       </div>

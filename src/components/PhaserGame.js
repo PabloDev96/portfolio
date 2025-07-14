@@ -169,9 +169,9 @@ const PhaserGame = () => {
           });
 
           const sectionMap = {
-            200: 'about',
-            400: 'projects',
-            600: 'contact',
+            200: 'aboutMario',
+            400: 'projectsMario',
+            600: 'contactMario',
           };
 
           const targetSection = sectionMap[block.x];
