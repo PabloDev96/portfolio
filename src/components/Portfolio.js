@@ -150,11 +150,7 @@ const Portfolio = ({ onBack }) => {
                             </div>
                         </div>
                         <div className="project-description">
-<<<<<<< HEAD
-                            <p className="parrafo-portfolio">Aplicación para acortar enlaces con historial, validación y vista dinámica. <b>ACTUALMENTE TRABAJANDO EN ELLO </b>.
-=======
                             <p>Aplicación para acortar enlaces con historial, validación y vista dinámica. <b>ACTUALMENTE TRABAJANDO EN ELLO </b>.
->>>>>>> a085cd4ea20ef8d909b8739314313629a54e342a
                             </p>
                             <div className="project-btns">
                                 <a href="https://github.com/PabloDev96/portfolio" target="_blank" rel="noopener noreferrer" className="p-btn">

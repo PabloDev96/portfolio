@@ -45,12 +45,6 @@ export default function IntroGame({ onGameEnd, onBack }) {
       canvas.width = window.innerWidth * 0.95;
       canvas.height = window.innerHeight * 0.8;
 
-      if (lastCanvasWidthRef.current !== null) {
-        const ratio = canvas.width / lastCanvasWidthRef.current;
-        setX((prevX) => prevX * ratio);
-      }
-      lastCanvasWidthRef.current = canvas.width;
-
       const baseWidth = canvas.width;
       const isMobile = window.innerWidth < 600;
 
@@ -65,6 +59,16 @@ export default function IntroGame({ onGameEnd, onBack }) {
         alienWidth: alienW,
         alienHeight: alienH,
       });
+
+      // Solo centrar si es la primera vez que se carga
+      if (lastCanvasWidthRef.current === null) {
+        setX(baseWidth / 2 - shipW / 2); // Centrar nave
+      } else {
+        const ratio = baseWidth / lastCanvasWidthRef.current;
+        setX((prevX) => prevX * ratio);
+      }
+
+      lastCanvasWidthRef.current = baseWidth;
     };
 
     setTimeout(resizeCanvas, 0);
