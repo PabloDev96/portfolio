@@ -86,6 +86,7 @@
 
 @media (max-width: 600px) {
   .phaser-wrapper {
+    margin-top: 140px;
     max-width: 100%;
     
   }
