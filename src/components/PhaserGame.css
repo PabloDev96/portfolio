@@ -4,11 +4,12 @@
 }
 
 .phaser-wrapper {
-  background-color: #5c94fc; /* Mantén esto si quieres el fondo azul del canvas */
+  background-color: #5c94fc;
   width: 100%;
   max-width: 800px;
   aspect-ratio: 16 / 9;
   margin: 0 auto;
+  margin-top: 70px;
   border: 4px solid #222;
   border-radius: 8px 8px 0 0;
   box-shadow: 0 0 16px #000;
@@ -46,21 +47,23 @@
   transform: scale(1.1);
 }
 
-.mobile-controls {
+.mario-mobile-controls {
   display: flex;
   justify-content: center;
   gap: 16px;
   padding: 12px 0;
-  background: #0a0a0a; /* fondo oscuro o transparente */
+  background: #0a0a0a;
   border-top: 2px solid #222;
 }
 
 
-.mobile-controls .btn {
+.mario-mobile-controls .btn {
   background: #1e2d3d;
   color: white;
   font-size: 24px;
-  padding: 14px 20px;
+  width: 50px;
+  height: 50px;
+  padding: 10px 10px;
   border-radius: 12px;
   border: none;
   cursor: pointer;
@@ -71,12 +74,12 @@
   transition: transform 0.2s ease;
 }
 
-.mobile-controls .btn:active {
+.mario-mobile-controls .btn:active {
   transform: scale(0.95);
 }
 
 @media (min-width: 768px) {
-  .mobile-controls {
+  .mario-mobile-controls {
     display: none;
   }
 }

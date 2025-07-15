@@ -17,19 +17,19 @@ const Contact = () => {
 
       <div className="mario-card">
         <p>
-          <span className="label">Email:</span>{' '}
-          <a href="mailto:pablo.diazgar@gmail.com">
+          <span className="mario-label">Email:</span>{' '}
+          <a className="mario-label-mail" href="mailto:pablo.diazgar@gmail.com">
             pablo.diazgar@gmail.com
           </a>
         </p>
         <p>
-          <span className="label">Teléfono:</span>{' '}
+          <span className="mario-label">Teléfono:</span>{' '}
           <span
             onClick={() => {
               navigator.clipboard.writeText('+34659103719');
               alert('¡Número copiado al portapapeles!');
             }}
-            className="copy-phone"
+            className="mario-copy-phone"
           >
             +34 659 103 719
           </span>
@@ -44,7 +44,7 @@ const Contact = () => {
         >
           <TbFileCv size={32} />
         </a>
-        <a href="https://www.linkedin.com/in/pablo-díaz-garcía-344048350" target="_blank" rel="noopener noreferrer" className="icon-button linkedin">
+        <a href="https://www.linkedin.com/in/pablo-díaz-garcía-344048350" target="_blank" rel="noopener noreferrer" className="mario-icon-button linkedin">
           <FaLinkedin size={32} />
         </a>
         <a href="https://github.com/PabloDev96" target="_blank" rel="noopener noreferrer" className="mario-icon-button github">

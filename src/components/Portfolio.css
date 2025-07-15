@@ -245,14 +245,13 @@ h2 {
 }
 
 .up-btn:hover {
-    background-color: #009394;
-    transform: translateY(-2px);
+    transform: scale(1.1);
 }
 
 .up-btn svg {
     width: 20px;
     height: 20px;
-    color: #006270;
+    color: #032830; 
 }
 
 

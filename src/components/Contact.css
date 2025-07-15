@@ -19,6 +19,7 @@
 .contact-card {
   background-color: rgba(0, 184, 148, 0.08);
   border: 2px solid #00b894;
+  color: #00b894;
   border-radius: 12px;
   padding: 30px;
   max-width: 500px;
@@ -26,7 +27,6 @@
   box-shadow: 0 0 12px rgba(0, 184, 148, 0.3);
   font-size: 0.8rem;
   text-align: center;
-  color: #dcdcdc;
 }
 
 .contact-card p {
@@ -35,11 +35,12 @@
 
 .copy-phone {
   cursor: pointer;
-  color: #00b894;
+  color: #ffffff;
   }
 
 .copy-phone:hover {
   text-decoration: underline;
+  color: #00b894;
 }
 
 @media (max-width: 480px) {

@@ -1,4 +1,3 @@
-// IntroGame.js
 import React, { useEffect, useRef, useState } from 'react';
 import './IntroGame.css';
 import naveImg from '../assets/nave.png';
@@ -60,7 +59,7 @@ export default function IntroGame({ onGameEnd, onBack }) {
         alienHeight: alienH,
       });
 
-      // Solo centrar si es la primera vez que se carga
+      
       if (lastCanvasWidthRef.current === null) {
         setX(baseWidth / 2 - shipW / 2); // Centrar nave
       } else {

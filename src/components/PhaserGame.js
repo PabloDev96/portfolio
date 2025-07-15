@@ -1,7 +1,7 @@
-// src/components/PhaserGame.js
 import React, { useEffect, useRef } from 'react';
 import Phaser from 'phaser';
 import './PhaserGame.css';
+import { FaArrowLeft, FaArrowRight, FaArrowUp } from "react-icons/fa";
 
 const PhaserGame = () => {
   const gameContainerRef = useRef(null);
@@ -253,27 +253,27 @@ const PhaserGame = () => {
   return (
     <div className="phaser-wrapper">
       <div ref={gameContainerRef} className="phaser-canvas-container" />
-      <div className="mobile-controls">
+      <div className="mario-mobile-controls">
   <button
     className="btn left"
     onTouchStart={() => handleTouch('left')}
     onTouchEnd={() => handleStop('left')}
   >
-    ←
+    <FaArrowLeft />
   </button>
   <button
     className="btn jump"
     onTouchStart={() => handleTouch('jump')}
     onTouchEnd={() => handleStop('jump')}
   >
-    ↑
+    <FaArrowUp />
   </button>
   <button
     className="btn right"
     onTouchStart={() => handleTouch('right')}
     onTouchEnd={() => handleStop('right')}
   >
-    →
+    <FaArrowRight />
   </button>
 </div>
 

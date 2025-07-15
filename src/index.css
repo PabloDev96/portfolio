@@ -6,19 +6,20 @@ body {
   margin: 0;
   padding: 0;
   background-color: #0c1821; 
-  color: #00b894;         
+          
   font-family: 'PressStart2P', monospace;
   font-size: 12px;
   line-height: 1.5;
 }
 
 a {
-  color: #00b894;
+  color: #ffffff;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #00b894;
 }
 
 .back-button {

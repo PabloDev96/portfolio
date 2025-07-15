@@ -12,7 +12,6 @@ import cssIcon from '../assets/tech/css3.png';
 import mysqlIcon from '../assets/tech/mysql.png';
 import reactIcon from '../assets/tech/react.png';
 import { FaArrowUp } from "react-icons/fa";
-import { FaArrowLeft } from "react-icons/fa";
 
 const projects = [
   {
@@ -21,7 +20,6 @@ const projects = [
     image: gameboyTaskly,
     tech: [htmlIcon, tailwindIcon, jsIcon, phpIcon, mysqlIcon],
     description: `Proyecto grupal donde desarrollé el backend (APIs para usuarios, proyectos y tareas) e integré con el frontend. La app permite crear y gestionar proyectos y tareas con vista Kanban (drag and drop), login, registro y control de accesos por roles.`,
-
     demo: 'https://coral-mule-348004.hostingersite.com/',
     repo: 'https://github.com/PabloDev96/GestorDeTareasTaskly'
   },
@@ -29,7 +27,7 @@ const projects = [
     id: 2,
     title: 'Acortador de URLs',
     image: gameboyURL,
-    tech: [htmlIcon, cssIcon, phpIcon, laravelIcon, mysqlIcon],
+    tech: [htmlIcon, cssIcon, laravelIcon],
     description:
       'Aplicación para acortar enlaces con historial, validación y vista dinámica. ACTUALMENTE EN PROGRESO.',
     demo: 'https://github.com/PabloDev96/PabloDev96',
@@ -42,6 +40,7 @@ const Projects = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
   return (
     <section className="mario-section">
       <h2 className="mario-title">Proyectos</h2>
@@ -50,9 +49,16 @@ const Projects = () => {
         {projects.map((project) => (
           <div key={project.id} className="mario-retro-project">
             <div className="mario-image-and-description">
-              <div className="mario-image-wrapper">
+              <div className="mario-image-wrapper mario-overlay-wrapper">
                 <img src={project.image} alt={project.title} className="mario-retro-image" />
+
+                <div className="mario-tech-overlay-center">
+                  {project.tech.map((icon, i) => (
+                    <img key={i} src={icon} alt="Tech Icon" className="mario-tech-icon-img" />
+                  ))}
+                </div>
               </div>
+
               <div className="mario-hover-description">
                 <p>{project.description}</p>
                 <div className="mario-project-buttons">
@@ -68,6 +74,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
+
       <button className="up-btn" onClick={scrollToTop}><FaArrowUp /></button>
     </section>
   );
