@@ -94,21 +94,27 @@ function App() {
         <>
           <HeaderMario />
           <AboutMario />
-          <button className="back-button-fixed" onClick={goToLanding}><FaArrowLeft /></button>
+          <button className="back-button-fixed" onClick={() => setSection('supermario')}>
+            <FaArrowLeft />
+          </button>
         </>
       )}
 
       {section === 'projectsMario' && (
         <>
           <ProjectsMario />
-          <button className="back-button-fixed" onClick={goToLanding}><FaArrowLeft /></button>
+          <button className="back-button-fixed" onClick={() => setSection('supermario')}>
+            <FaArrowLeft />
+          </button>
         </>
       )}
 
       {section === 'contactMario' && (
         <>
           <ContactMario />
-          <button className="back-button-fixed" onClick={goToLanding}><FaArrowLeft /></button>
+          <button className="back-button-fixed" onClick={() => setSection('supermario')}>
+            <FaArrowLeft />
+          </button>
         </>
       )}
     </div>
