@@ -1,4 +1,3 @@
-// components/Landing.js
 import React from 'react';
 import './Landing.css';
 import { FaLink } from "react-icons/fa6";
@@ -12,29 +11,29 @@ function Landing({ onSelectOption }) {
       <h1>Bienvenido a mi Portfolio!</h1>
       <div className="landing-buttons">
         <button onClick={() => onSelectOption('basic')}>Versión Estándar</button>
-        <button onClick={() => onSelectOption('interactive')}>Versión Space Invaders</button>     
-        <button onClick={() => onSelectOption('supermario')}>Versión Mario</button>    
+        <button onClick={() => onSelectOption('interactive')}>Versión Space Invaders</button>
+        <button onClick={() => onSelectOption('supermario')}>Versión Mario</button>
       </div>
       <div className="icon-btns">
         <a href="/CV_PabloDíazGarcía.pdf" target="_blank" rel="noopener noreferrer" className="icon-btn cv">
-                                    <TbFileCv size={32} />
-                                </a>
-                                <a
-                                    href="https://www.linkedin.com/in/pablo-díaz-garcía-344048350"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="icon-btn linkedin"
-                                >
-                                    <FaLinkedin size={32} />
-                                </a>
-                                <a
-                                    href="https://github.com/PabloDev96"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="icon-btn github"
-                                >
-                                    <FaGithub size={32} />
-                                </a>
+          <TbFileCv size={32} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/pablo-díaz-garcía-344048350"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="icon-btn linkedin"
+        >
+          <FaLinkedin size={32} />
+        </a>
+        <a
+          href="https://github.com/PabloDev96"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="icon-btn github"
+        >
+          <FaGithub size={32} />
+        </a>
       </div>
     </div>
   );

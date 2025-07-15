@@ -1,11 +1,10 @@
-/* components/Landing.css */
 .landing-container {
   font-family: 'Poppins', sans-serif;
   background-color: #006270;
   color: #FFFFFF;
   width: 100vw;
-  height: 100vh; /* asegura que no haya scroll vertical */
-  overflow: hidden; /* por si algo se desborda */
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,8 +19,6 @@
   margin-bottom: 2rem;
   margin-top: 0%;
 }
-
-
 
 .landing-buttons {
   display: flex;

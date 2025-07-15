@@ -12,7 +12,6 @@
     width: 100%;
 }
 
-/* SOLO aplica fondo Mario en secciones específicas */
 .mario-bg {
     background-color: #5c94fc;
 }
@@ -21,7 +20,7 @@
 /* HEADER STYLES */
 
 .header-mario {
-    
+
     padding: 2rem 1rem;
     display: flex;
     justify-content: center;
@@ -35,7 +34,7 @@
     padding: 2rem;
     max-width: 900px;
     width: 100%;
-    
+
 }
 
 .header-content {
@@ -185,18 +184,18 @@
 }
 
 .mario-grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem;
 }
 
 .auto-width {
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .mario-tech-icon img {
@@ -373,41 +372,41 @@
 }
 
 .mario-overlay-wrapper {
-  position: relative;
+    position: relative;
 }
 
 .mario-tech-overlay-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.6rem;
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 0.8rem 1rem;
-  border-radius: 10px;
-  z-index: 2;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  max-width: 140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    max-width: 140px;
 }
 
 
 .mario-overlay-wrapper:hover .mario-tech-overlay-center {
-  opacity: 1;
+    opacity: 1;
 }
 
 .mario-tech-icon-img {
-  width: 28px;
-  height: auto;
-  transition: transform 0.3s ease;
+    width: 28px;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
 .mario-tech-icon-img:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 
@@ -478,16 +477,16 @@
     color: #1d3557;
 }
 
-.mario-label-mail{
-color: #1d3557;
+.mario-label-mail {
+    color: #1d3557;
 }
 
-.mario-label{
-color: #1d3557;
+.mario-label {
+    color: #1d3557;
 }
 
-.mario-label-mail:hover{
-color: #e63946;
+.mario-label-mail:hover {
+    color: #e63946;
 }
 
 .mario-contact-card .mario-label {
@@ -536,7 +535,6 @@ color: #e63946;
     transform: scale(1.1);
 }
 
-/* Botón específico (opcional para colores únicos) */
 .mario-icon-button.cv {
     background-color: #f1c40f;
     color: #1d3557;
@@ -547,7 +545,7 @@ color: #e63946;
 }
 
 .mario-icon-button.linkedin:hover {
-    color:#fbfbfb;
+    color: #fbfbfb;
 }
 
 .mario-icon-button.github {
@@ -555,7 +553,7 @@ color: #e63946;
 }
 
 .mario-icon-button.github:hover {
-    color:#fbfbfb;
+    color: #fbfbfb;
 }
 
 /* Responsive */

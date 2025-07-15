@@ -1,5 +1,5 @@
 import React from 'react';
-import './Contact.css'; // puedes unificarlo con Projects.css si prefieres
+import './Contact.css';
 import { TbFileCv } from "react-icons/tb";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaArrowUp } from "react-icons/fa";
