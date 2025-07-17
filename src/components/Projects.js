@@ -8,6 +8,8 @@ import pcRetroAcortador from '../assets/projects/pcretro-acortador.png';
 
 import htmlIcon from '../assets/tech/html5.png';
 import tailwindIcon from '../assets/tech/tailwind.png';
+import postgreIcon from '../assets/tech/postgre.png';
+import bladeIcon from '../assets/tech/blade.png';
 import jsIcon from '../assets/tech/javascript.png';
 import phpIcon from '../assets/tech/php.png';
 import laravelIcon from '../assets/tech/laravel.png';
@@ -32,11 +34,11 @@ const projects = [
     id: 2,
     title: 'Acortador de URLs',
     image: pcRetroAcortador,
-    tech: [htmlIcon, cssIcon, phpIcon, laravelIcon, mysqlIcon],
+    tech: [htmlIcon, cssIcon, bladeIcon, laravelIcon, postgreIcon],
     description:
       'Aplicación para acortar enlaces con historial, validación y vista dinámica. ACTUALMENTE EN PROGRESO.',
-    demo: 'https://github.com/PabloDev96/PabloDev96',
-    repo: 'https://github.com/PabloDev96/PabloDev96'
+    demo: 'https://acortador-url-18kt.onrender.com/',
+    repo: 'https://github.com/PabloDev96/acortador-url'
   },  
 ];
 

@@ -137,15 +137,16 @@ const Portfolio = ({ onBack }) => {
                     <div className="project-card-image">
                         <div
                             className="image-container"
-                            style={{ backgroundImage: `url(${require('../assets/projects/laptop-in-progress.png')})` }}
+                            style={{ backgroundImage: `url(${require('../assets/projects/laptop-acortador.png')})` }}
                         >
                             <div className="project-overlay">
                                 <h3>Acortador URLs</h3>
                                 <div className="tech-icons">
                                     <img src={require('../assets/tech/html5.png')} alt="HTML" />
                                     <img src={require('../assets/tech/css3.png')} alt="CSS" />
+                                    <img src={require('../assets/tech/blade.png')} alt="HTML" />
                                     <img src={require('../assets/tech/laravel.png')} alt="Laravel" />
-                                    <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
+                                    <img src={require('../assets/tech/postgre.png')} alt="MySQL" />
                                 </div>
                             </div>
                         </div>
@@ -153,10 +154,10 @@ const Portfolio = ({ onBack }) => {
                             <p>Aplicación para acortar enlaces con historial, validación y vista dinámica. <b>ACTUALMENTE TRABAJANDO EN ELLO </b>.
                             </p>
                             <div className="project-btns">
-                                <a href="https://github.com/PabloDev96/portfolio" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                <a href="https://acortador-url-18kt.onrender.com/" target="_blank" rel="noopener noreferrer" className="p-btn">
                                     <FaLink />
                                 </a>
-                                <a href="https://github.com/PabloDev96/portfolio" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                <a href="https://github.com/PabloDev96/acortador-url" target="_blank" rel="noopener noreferrer" className="p-btn">
                                     <FaGithub />
                                 </a>
                             </div>
