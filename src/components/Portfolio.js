@@ -4,7 +4,7 @@ import { FaLink } from "react-icons/fa6";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { TbFileCv } from "react-icons/tb";
 import htmlLogo from '../assets/tech/html5.png';
-import cssLogo from '../assets/tech/css3.png';  
+import cssLogo from '../assets/tech/css3.png';
 import tailwindLogo from '../assets/tech/tailwind.png';
 import jsLogo from '../assets/tech/javascript.png';
 import phpLogo from '../assets/tech/php.png';
@@ -30,7 +30,7 @@ const Portfolio = ({ onBack }) => {
             <section className="hero">
                 <div className="text-content">
                     <h1>Hola, soy <span className="highlight">Pablo Díaz</span></h1>
-                    <h2 className="section-label">DESARROLLADOR WEB</h2>                    
+                    <h2 className="section-label">DESARROLLADOR WEB</h2>
                     <p className="parrafo-portfolio">Diseño y desarrollo aplicaciones web modernas, funcionales y con personalidad.</p>
                     <div className="icon-btns">
                         <a href="/CV_PabloDíazGarcía.pdf" target="_blank" rel="noopener noreferrer" className="icon-btn cv">
@@ -89,7 +89,7 @@ const Portfolio = ({ onBack }) => {
                             </div>
                         </div>
                         <div className="project-description">
-                            <p className="parrafo-portfolio">Proyecto grupal donde desarrollé el backend (APIs para usuarios, proyectos y tareas) e integré con el frontend. La app permite crear y gestionar proyectos y tareas con vista Kanban (drag and drop), login, registro y control de accesos por roles.                                
+                            <p className="parrafo-portfolio">Proyecto grupal donde desarrollé el backend (APIs para usuarios, proyectos y tareas) e integré con el frontend. La app permite crear y gestionar proyectos y tareas con vista Kanban (drag and drop), login, registro y control de accesos por roles.
                             </p>
                             <div className="project-btns">
                                 <a href="https://coral-mule-348004.hostingersite.com/" target="_blank" rel="noopener noreferrer" className="p-btn">
@@ -151,8 +151,7 @@ const Portfolio = ({ onBack }) => {
                             </div>
                         </div>
                         <div className="project-description">
-                            <p>Aplicación para acortar enlaces con historial, validación y vista dinámica. <b>ACTUALMENTE TRABAJANDO EN ELLO </b>.
-                            </p>
+                            <p>Aplicación web en Laravel para acortar URLs. Genera enlaces cortos únicos que redirigen a la URL original. Desplegada en Render usando Docker y PostgreSQL.</p>
                             <div className="project-btns">
                                 <a href="https://acortador-url-18kt.onrender.com/" target="_blank" rel="noopener noreferrer" className="p-btn">
                                     <FaLink />
@@ -162,7 +161,7 @@ const Portfolio = ({ onBack }) => {
                                 </a>
                             </div>
                         </div>
-                    </div> 
+                    </div>
 
                     {/* PROYECTO 4
                     <div className="project-card-image">

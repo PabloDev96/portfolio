@@ -36,7 +36,7 @@ const projects = [
     image: pcRetroAcortador,
     tech: [htmlIcon, cssIcon, bladeIcon, laravelIcon, postgreIcon],
     description:
-      'Aplicación para acortar enlaces con historial, validación y vista dinámica. ACTUALMENTE EN PROGRESO.',
+      'Aplicación web en Laravel para acortar URLs. Genera enlaces cortos únicos que redirigen a la URL original. Desplegada en Render usando Docker y PostgreSQL.',
     demo: 'https://acortador-url-18kt.onrender.com/',
     repo: 'https://github.com/PabloDev96/acortador-url'
   },  
