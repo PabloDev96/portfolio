@@ -1,8 +1,7 @@
 @font-face {
   font-family: 'MarioFont';
-  src: url('../../public/fonts/SuperMario256.ttf') format('truetype');
+  src: url('/public/fonts/SuperMario256.ttf') format('truetype');
 }
-
 
 .phaser-wrapper {
   background-color: #5c94fc;
