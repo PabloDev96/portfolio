@@ -12,7 +12,7 @@ function Landing({ onSelectOption }) {
       <div className="landing-buttons">
         <button onClick={() => onSelectOption('basic')}>Versión Estándar</button>
         <button onClick={() => onSelectOption('interactive')}>Versión Space Invaders</button>
-        <button onClick={() => onSelectOption('supermario')}>Versión Mario</button>
+        <button onClick={() => onSelectOption('supermario')}>Versión Mario Bros</button>
       </div>
       <div className="icon-btns">
         <a href="/CV_PabloDíazGarcía.pdf" target="_blank" rel="noopener noreferrer" className="icon-btn cv">
