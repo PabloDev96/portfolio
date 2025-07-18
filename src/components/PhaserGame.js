@@ -254,29 +254,28 @@ const PhaserGame = () => {
     <div className="phaser-wrapper">
       <div ref={gameContainerRef} className="phaser-canvas-container" />
       <div className="mario-mobile-controls">
-  <button
-    className="btn left"
-    onTouchStart={() => handleTouch('left')}
-    onTouchEnd={() => handleStop('left')}
-  >
-    <FaArrowLeft />
-  </button>
-  <button
-    className="btn jump"
-    onTouchStart={() => handleTouch('jump')}
-    onTouchEnd={() => handleStop('jump')}
-  >
-    <FaArrowUp />
-  </button>
-  <button
-    className="btn right"
-    onTouchStart={() => handleTouch('right')}
-    onTouchEnd={() => handleStop('right')}
-  >
-    <FaArrowRight />
-  </button>
-</div>
-
+        <button
+          className="btn left"
+          onTouchStart={() => handleTouch('left')}
+          onTouchEnd={() => handleStop('left')}
+        >
+          <FaArrowLeft />
+        </button>
+        <button
+          className="btn jump"
+          onTouchStart={() => handleTouch('jump')}
+          onTouchEnd={() => handleStop('jump')}
+        >
+          <FaArrowUp />
+        </button>
+        <button
+          className="btn right"
+          onTouchStart={() => handleTouch('right')}
+          onTouchEnd={() => handleStop('right')}
+        >
+          <FaArrowRight />
+        </button>
+      </div>
     </div>
   );
 };
