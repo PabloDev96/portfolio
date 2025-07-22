@@ -3,10 +3,11 @@ import './About.css'
 import './Projects.css';
 import { FaLink, FaGithub } from "react-icons/fa6";
 import pcRetroTaskly from '../assets/projects/pcretro-taskly.png';
-import pcRetroAdopcion from '../assets/projects/pcretro-webadopcion.png';
+import pcRetroRefugio from '../assets/projects/pcretro-pawshelt.png';
 import pcRetroAcortador from '../assets/projects/pcretro-acortador.png';
 
 import htmlIcon from '../assets/tech/html5.png';
+import springIcon from '../assets/tech/spring.png';
 import tailwindIcon from '../assets/tech/tailwind.png';
 import postgreIcon from '../assets/tech/postgre.png';
 import bladeIcon from '../assets/tech/blade.png';
@@ -40,6 +41,16 @@ const projects = [
     demo: 'https://acortador-url-18kt.onrender.com/',
     repo: 'https://github.com/PabloDev96/acortador-url'
   },  
+    {
+    id: 3,
+    title: 'PawShelt',
+    image: pcRetroRefugio,
+    tech: [springIcon, reactIcon, mysqlIcon],
+    description:
+      'App para la gestión interna de un refugio de animales. Permite llevar un control eficiente de animales, adopciones, voluntarios, donaciones y eventos. El objetivo principal es optimizar el trabajo diario de las protectoras, centralizando toda la información en una plataforma intuitiva, accesible y segura. ACTUALMENTE EN DESARROLLO',
+    demo: 'https://github.com/PabloDev96/paw-shelt',
+    repo: 'https://github.com/PabloDev96/paw-shelt'
+  },
 ];
 
 const Projects = () => {

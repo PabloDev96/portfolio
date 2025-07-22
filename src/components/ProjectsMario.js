@@ -2,8 +2,10 @@ import React from 'react';
 import './MarioStyle.css';
 import { FaLink, FaGithub } from "react-icons/fa6";
 import gameboyTaskly from '../assets/projects/gameboy-taskly.png';
+import gameboyRefugio from '../assets/projects/gameboy-pawshelt.png';
 import gameboyURL from '../assets/projects/gameboy-url.png';
 import htmlIcon from '../assets/tech/html5.png';
+import springIcon from '../assets/tech/spring.png';
 import tailwindIcon from '../assets/tech/tailwind.png';
 import postgreIcon from '../assets/tech/postgre.png';
 import bladeIcon from '../assets/tech/blade.png';
@@ -34,6 +36,16 @@ const projects = [
       'Aplicación web en Laravel para acortar URLs. Genera enlaces cortos únicos que redirigen a la URL original. Desplegada en Render usando Docker y PostgreSQL.',
     demo: 'https://acortador-url-18kt.onrender.com/',
     repo: 'https://github.com/PabloDev96/acortador-url'
+  },
+  {
+    id: 3,
+    title: 'PawShelt',
+    image: gameboyRefugio,
+    tech: [springIcon, reactIcon, mysqlIcon],
+    description:
+      'App para la gestión interna de un refugio de animales. Permite llevar un control eficiente de animales, adopciones, voluntarios, donaciones y eventos. El objetivo principal es optimizar el trabajo diario de las protectoras, centralizando toda la información en una plataforma intuitiva, accesible y segura. ACTUALMENTE EN DESARROLLO',
+    demo: 'https://github.com/PabloDev96/paw-shelt',
+    repo: 'https://github.com/PabloDev96/paw-shelt'
   },
 ];
 

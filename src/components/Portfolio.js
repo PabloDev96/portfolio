@@ -103,37 +103,7 @@ const Portfolio = ({ onBack }) => {
                     </div>
 
 
-                    {/*PROYECTO 2*
-                    <div className="project-card-image">
-                        <div
-                            className="image-container"
-                            style={{ backgroundImage: `url(${require('../assets/projects/laptop-taskly.png')})` }}
-                        >
-                            <div className="project-overlay">
-                                <h3>Web adopción mascotas</h3>
-                                <div className="tech-icons">
-                                    <img src={require('../assets/tech/html5.png')} alt="HTML" />
-                                    <img src={require('../assets/tech/tailwind.png')} alt="Tailwind" />
-                                    <img src={require('../assets/tech/javascript.png')} alt="JavaScript" />
-                                    <img src={require('../assets/tech/php.png')} alt="PHP" />
-                                    <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="project-description">
-                            <p className="parrafo-portfolio">App fullstack para publicar y buscar mascotas en adopción. Incluye filtros, perfiles, login/registro y carga de imágenes. Desarrollada con React, Node.js y MongoDB, enfocada en una experiencia accesible y responsive.</p>
-                            <div className="project-btns">
-                                <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
-                                    <FaLink />
-                                </a>
-                                <a href="" target="_blank" rel="noopener noreferrer" className="p-btn">
-                                    <FaGithub />
-                                </a>
-                            </div>
-                        </div>
-                    </div> */}
-
-                    {/* PROYECTO 3 */}
+                    {/* PROYECTO 2 */}
                     <div className="project-card-image">
                         <div
                             className="image-container"
@@ -157,6 +127,34 @@ const Portfolio = ({ onBack }) => {
                                     <FaLink />
                                 </a>
                                 <a href="https://github.com/PabloDev96/acortador-url" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                    <FaGithub />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*PROYECTO 3* */}
+                    <div className="project-card-image">
+                        <div
+                            className="image-container"
+                            style={{ backgroundImage: `url(${require('../assets/projects/laptop-pawshelt.png')})` }}
+                        >
+                            <div className="project-overlay">
+                                <h3>PawShelt</h3>
+                                <div className="tech-icons">
+                                    <img src={require('../assets/tech/spring.png')} alt="Spring" />
+                                    <img src={require('../assets/tech/react.png')} alt="React" />
+                                    <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="project-description">
+                            <p className="parrafo-portfolio">App para la gestión interna de un refugio de animales. Permite llevar un control eficiente de animales, adopciones, voluntarios, donaciones y eventos. El objetivo principal es optimizar el trabajo diario de las protectoras, centralizando toda la información en una plataforma intuitiva, accesible y segura. ACTUALMENTE EN DESARROLLO</p>
+                            <div className="project-btns">
+                                <a href="https://github.com/PabloDev96/paw-shelt" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                    <FaLink />
+                                </a>
+                                <a href="https://github.com/PabloDev96/paw-shelt" target="_blank" rel="noopener noreferrer" className="p-btn">
                                     <FaGithub />
                                 </a>
                             </div>
