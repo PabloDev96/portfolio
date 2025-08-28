@@ -102,8 +102,35 @@ const Portfolio = ({ onBack }) => {
                         </div>
                     </div>
 
-
                     {/* PROYECTO 2 */}
+                    <div className="project-card-image">
+                        <div
+                            className="image-container"
+                            style={{ backgroundImage: `url(${require('../assets/projects/laptop-pawshelt.png')})` }}
+                        >
+                            <div className="project-overlay">
+                                <h3>PawShelt</h3>
+                                <div className="tech-icons">
+                                    <img src={require('../assets/tech/spring.png')} alt="Spring" />
+                                    <img src={require('../assets/tech/react.png')} alt="React" />
+                                    <img src={require('../assets/tech/postgre.png')} alt="PostgreSQL" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="project-description">
+                            <p className="parrafo-portfolio">App para la gestión interna de un refugio de animales. Permite llevar un control eficiente de animales, adopciones, voluntarios, donaciones y eventos. El objetivo principal es optimizar el trabajo diario de las protectoras, centralizando toda la información en una plataforma intuitiva, accesible y segura. ACTUALMENTE EN DESARROLLO</p>
+                            <div className="project-btns">
+                                <a href="https://paw-shelt-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                    <FaLink />
+                                </a>
+                                <a href="https://github.com/PabloDev96/paw-shelt" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                    <FaGithub />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* PROYECTO 3 */}
                     <div className="project-card-image">
                         <div
                             className="image-container"
@@ -133,33 +160,7 @@ const Portfolio = ({ onBack }) => {
                         </div>
                     </div>
 
-                    {/*PROYECTO 3* */}
-                    <div className="project-card-image">
-                        <div
-                            className="image-container"
-                            style={{ backgroundImage: `url(${require('../assets/projects/laptop-pawshelt.png')})` }}
-                        >
-                            <div className="project-overlay">
-                                <h3>PawShelt</h3>
-                                <div className="tech-icons">
-                                    <img src={require('../assets/tech/spring.png')} alt="Spring" />
-                                    <img src={require('../assets/tech/react.png')} alt="React" />
-                                    <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="project-description">
-                            <p className="parrafo-portfolio">App para la gestión interna de un refugio de animales. Permite llevar un control eficiente de animales, adopciones, voluntarios, donaciones y eventos. El objetivo principal es optimizar el trabajo diario de las protectoras, centralizando toda la información en una plataforma intuitiva, accesible y segura. ACTUALMENTE EN DESARROLLO</p>
-                            <div className="project-btns">
-                                <a href="https://github.com/PabloDev96/paw-shelt" target="_blank" rel="noopener noreferrer" className="p-btn">
-                                    <FaLink />
-                                </a>
-                                <a href="https://github.com/PabloDev96/paw-shelt" target="_blank" rel="noopener noreferrer" className="p-btn">
-                                    <FaGithub />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                     {/* PROYECTO 4
                     <div className="project-card-image">

@@ -29,6 +29,16 @@ const projects = [
   },
   {
     id: 2,
+    title: 'PawShelt',
+    image: gameboyRefugio,
+    tech: [springIcon, reactIcon, postgreIcon],
+    description:
+      'App para la gestión interna de un refugio de animales. Permite llevar un control eficiente de animales, adopciones, voluntarios, donaciones y eventos. El objetivo principal es optimizar el trabajo diario de las protectoras, centralizando toda la información en una plataforma intuitiva, accesible y segura. ACTUALMENTE EN DESARROLLO',
+    demo: 'https://paw-shelt-frontend.vercel.app/',
+    repo: 'https://github.com/PabloDev96/paw-shelt'
+  },
+  {
+    id: 3,
     title: 'Acortador de URLs',
     image: gameboyURL,
     tech: [htmlIcon, cssIcon, bladeIcon, laravelIcon, postgreIcon],
@@ -37,16 +47,7 @@ const projects = [
     demo: 'https://acortador-url-18kt.onrender.com/',
     repo: 'https://github.com/PabloDev96/acortador-url'
   },
-  {
-    id: 3,
-    title: 'PawShelt',
-    image: gameboyRefugio,
-    tech: [springIcon, reactIcon, mysqlIcon],
-    description:
-      'App para la gestión interna de un refugio de animales. Permite llevar un control eficiente de animales, adopciones, voluntarios, donaciones y eventos. El objetivo principal es optimizar el trabajo diario de las protectoras, centralizando toda la información en una plataforma intuitiva, accesible y segura. ACTUALMENTE EN DESARROLLO',
-    demo: 'https://github.com/PabloDev96/paw-shelt',
-    repo: 'https://github.com/PabloDev96/paw-shelt'
-  },
+  
 ];
 
 const Projects = () => {
