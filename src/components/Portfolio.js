@@ -118,7 +118,7 @@ const Portfolio = ({ onBack }) => {
                             </div>
                         </div>
                         <div className="project-description">
-                            <p className="parrafo-portfolio">App para la gestión interna de un refugio de animales. Permite llevar un control eficiente de animales, adopciones, voluntarios, donaciones y eventos. El objetivo principal es optimizar el trabajo diario de las protectoras, centralizando toda la información en una plataforma intuitiva, accesible y segura. ACTUALMENTE EN DESARROLLO</p>
+                            <p className="parrafo-portfolio">App para la gestión interna de un refugio de animales. Permite llevar un control eficiente de animales, adopciones, citas y estadísticas con sistema de roles implementado. El objetivo principal es optimizar el trabajo diario de las protectoras, centralizando toda la información en una plataforma intuitiva, accesible y segura.</p>
                             <div className="project-btns">
                                 <a href="https://paw-shelt-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" className="p-btn">
                                     <FaLink />
@@ -158,7 +158,7 @@ const Portfolio = ({ onBack }) => {
                                 </a>
                             </div>
                         </div>
-                    </div> */}
+                    </div> */}  
 
                     
 

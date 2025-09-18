@@ -37,7 +37,7 @@ const projects = [
     image: pcRetroRefugio,
     tech: [springIcon, reactIcon, postgreIcon],
     description:
-      'App para la gestión interna de un refugio de animales. Permite llevar un control eficiente de animales, adopciones, voluntarios, donaciones y eventos. El objetivo principal es optimizar el trabajo diario de las protectoras, centralizando toda la información en una plataforma intuitiva, accesible y segura. ACTUALMENTE EN DESARROLLO',
+      'App para la gestión interna de un refugio de animales. Permite llevar un control eficiente de animales, adopciones, citas y estadísticas con sistema de roles implementado. El objetivo principal es optimizar el trabajo diario de las protectoras, centralizando toda la información en una plataforma intuitiva, accesible y segura.',
     demo: 'https://paw-shelt-frontend.vercel.app/',
     repo: 'https://github.com/PabloDev96/paw-shelt'
   },
