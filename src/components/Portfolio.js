@@ -246,8 +246,8 @@ const Portfolio = ({ onBack }) => {
                         <span>Apache</span>
                     </div>
                     <div className="tech-card">
-                        <img src={laravelLogo} alt="Laravel" />
-                        <span>Laravel</span>
+                        <img src={springLogo} alt="Spring" />
+                        <span>Spring</span>
                     </div>
                 </div>
             </section>
@@ -260,9 +260,9 @@ const Portfolio = ({ onBack }) => {
                         <img src={reactLogo} alt="React" />
                         <span>React</span>
                     </div>
-                    <div className="learning-card">
-                        <img src={springLogo} alt="Spring" />
-                        <span>Spring</span>
+                    <div className="learning-card">                        
+                        <img src={laravelLogo} alt="Laravel" />
+                        <span>Laravel</span>
                     </div>
                 </div>
             </section>

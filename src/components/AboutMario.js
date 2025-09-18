@@ -40,7 +40,7 @@ const AboutMario = () => {
 
       <h2 className="mario-title">Tecnologías que manejo</h2>
       <div className="mario-card auto-width mario-grid">
-        {[htmlLogo, cssLogo, tailwindLogo, jsLogo, phpLogo, mysqlLogo, gitLogo, apacheLogo, laravelLogo].map((logo, index) => (
+        {[htmlLogo, cssLogo, tailwindLogo, jsLogo, phpLogo, mysqlLogo, gitLogo, apacheLogo, springLogo ].map((logo, index) => (
           <div className="mario-tech-icon" key={index}>
             <img src={logo} alt="Tech logo" />
           </div>
@@ -53,7 +53,7 @@ const AboutMario = () => {
           <img src={reactLogo} alt="React" />
         </div>
         <div className="mario-tech-icon">
-          <img src={springLogo} alt="Spring Boot" />
+          <img src={laravelLogo} alt="Spring Boot" />
         </div>
       </div>
 
