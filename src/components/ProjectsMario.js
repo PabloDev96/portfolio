@@ -36,18 +36,7 @@ const projects = [
       'App para la gestión interna de un refugio de animales. Permite llevar un control eficiente de animales, adopciones, citas y estadísticas con sistema de roles implementado. El objetivo principal es optimizar el trabajo diario de las protectoras, centralizando toda la información en una plataforma intuitiva, accesible y segura.',
     demo: 'https://paw-shelt-frontend.vercel.app/',
     repo: 'https://github.com/PabloDev96/paw-shelt'
-  },
-  {/*{
-    id: 3,
-    title: 'Acortador de URLs',
-    image: gameboyURL,
-    tech: [htmlIcon, cssIcon, bladeIcon, laravelIcon, postgreIcon],
-    description:
-      'Aplicación web en Laravel para acortar URLs. Genera enlaces cortos únicos que redirigen a la URL original. Desplegada en Render usando Docker y PostgreSQL.',
-    demo: 'https://acortador-url-18kt.onrender.com/',
-    repo: 'https://github.com/PabloDev96/acortador-url'
-  },*/}
-  
+  },  
 ];
 
 const Projects = () => {

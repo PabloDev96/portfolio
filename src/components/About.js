@@ -12,6 +12,7 @@ import apacheLogo from '../assets/tech/apache.png';
 import laravelLogo from '../assets/tech/laravel.png';
 import reactLogo from '../assets/tech/react.png';
 import springLogo from '../assets/tech/spring.png';
+import postgreLogo from '../assets/tech/postgre.png';
 import { FaArrowUp } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 
@@ -46,29 +47,32 @@ const About = () => {
           <img src={htmlLogo} alt="HTML" />
         </div>
         <div className="tech-icon">
-          <img src={cssLogo} alt="HTML" />
+          <img src={cssLogo} alt="CSS" />
         </div>
         <div className="tech-icon">
-          <img src={tailwindLogo} alt="HTML" />
+          <img src={tailwindLogo} alt="Tailwind" />
         </div>
         <div className="tech-icon">
-          <img src={jsLogo} alt="HTML" />
+          <img src={jsLogo} alt="JavaScript" />
         </div>
         <div className="tech-icon">
-          <img src={phpLogo} alt="HTML" />
+          <img src={phpLogo} alt="PHP" />
         </div>
         <div className="tech-icon">
-          <img src={mysqlLogo} alt="HTML" />
+          <img src={mysqlLogo} alt="MySQL" />
         </div>
         <div className="tech-icon">
-          <img src={gitLogo} alt="HTML" />
+          <img src={gitLogo} alt="Git" />
         </div>
         <div className="tech-icon">
           <img src={apacheLogo} alt="HTML" />
         </div>
         <div className="tech-icon">
-          <img src={laravelLogo} alt="HTML" />
-        </div>        
+          <img src={springLogo} alt="Spring" />
+        </div>
+        <div className="tech-icon">
+          <img src={postgreLogo} alt="PostgreSQL" />
+        </div>         
       </div>
 
       <h2 className="section-title">Actualmente aprendiendo</h2>
@@ -77,7 +81,7 @@ const About = () => {
           <img src={reactLogo} alt="HTML" />
         </div>
         <div className="tech-icon">
-          <img src={springLogo} alt="HTML" />
+          <img src={laravelLogo} alt="HTML" />
         </div>
       </div>
       <button className="up-btn" onClick={scrollToTop}><FaArrowUp /></button>
