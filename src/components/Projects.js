@@ -41,7 +41,7 @@ const projects = [
     demo: 'https://paw-shelt-frontend.vercel.app/',
     repo: 'https://github.com/PabloDev96/paw-shelt'
   },
-  {
+  {/*{
     id: 3,
     title: 'Acortador de URLs',
     image: pcRetroAcortador,
@@ -50,7 +50,7 @@ const projects = [
       'Aplicación web en Laravel para acortar URLs. Genera enlaces cortos únicos que redirigen a la URL original. Desplegada en Render usando Docker y PostgreSQL.',
     demo: 'https://acortador-url-18kt.onrender.com/',
     repo: 'https://github.com/PabloDev96/acortador-url'
-  },    
+  }, */}   
 ];
 
 const Projects = () => {

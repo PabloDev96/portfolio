@@ -130,7 +130,7 @@ const Portfolio = ({ onBack }) => {
                         </div>
                     </div>
 
-                    {/* PROYECTO 3 */}
+                    {/* PROYECTO 3 
                     <div className="project-card-image">
                         <div
                             className="image-container"
@@ -158,7 +158,7 @@ const Portfolio = ({ onBack }) => {
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     
 
