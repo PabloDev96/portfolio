@@ -13,6 +13,7 @@ import laravelLogo from '../assets/tech/laravel.png';
 import reactLogo from '../assets/tech/react.png';
 import springLogo from '../assets/tech/spring.png';
 import postgreIcon from '../assets/tech/postgre.png';
+import wordpressLogo from '../assets/tech/wordpress.png';
 import { FaArrowUp } from "react-icons/fa";
 
 const AboutMario = () => {
@@ -41,7 +42,7 @@ const AboutMario = () => {
 
       <h2 className="mario-title">Tecnologías que manejo</h2>
       <div className="mario-card auto-width mario-grid">
-        {[htmlLogo, cssLogo, tailwindLogo, jsLogo, phpLogo, mysqlLogo, gitLogo, apacheLogo, springLogo, postgreIcon ].map((logo, index) => (
+        {[htmlLogo, cssLogo, tailwindLogo, jsLogo, phpLogo, mysqlLogo, gitLogo, apacheLogo, springLogo, postgreIcon, wordpressLogo ].map((logo, index) => (
           <div className="mario-tech-icon" key={index}>
             <img src={logo} alt="Tech logo" />
           </div>

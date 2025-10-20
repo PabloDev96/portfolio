@@ -16,6 +16,7 @@ import reactLogo from '../assets/tech/react.png';
 import springLogo from '../assets/tech/spring.png';
 import javaLogo from '../assets/tech/java.png';
 import postgreLogo from '../assets/tech/postgre.png';
+import wordpressLogo from '../assets/tech/wordpress.png';
 import laptopImg from '../assets/projects/laptop.png';
 import { FaArrowUp } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
@@ -253,6 +254,10 @@ const Portfolio = ({ onBack }) => {
                     <div className="tech-card">
                         <img src={postgreLogo} alt="PostgreSQL" />
                         <span>PostgreSQL</span>
+                    </div>
+                    <div className="tech-card">
+                        <img src={wordpressLogo} alt="Wordpress" />
+                        <span>Wordpress</span>
                     </div>
                 </div>
             </section>

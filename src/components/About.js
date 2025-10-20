@@ -13,6 +13,7 @@ import laravelLogo from '../assets/tech/laravel.png';
 import reactLogo from '../assets/tech/react.png';
 import springLogo from '../assets/tech/spring.png';
 import postgreLogo from '../assets/tech/postgre.png';
+import wordpressLogo from '../assets/tech/wordpress.png';
 import { FaArrowUp } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 
@@ -72,7 +73,10 @@ const About = () => {
         </div>
         <div className="tech-icon">
           <img src={postgreLogo} alt="PostgreSQL" />
-        </div>         
+        </div>
+        <div className="tech-icon">
+          <img src={wordpressLogo} alt="Wordpress" />
+        </div>           
       </div>
 
       <h2 className="section-title">Actualmente aprendiendo</h2>
