@@ -132,35 +132,31 @@ const Portfolio = ({ onBack }) => {
                         </div>
                     </div>
 
-                    {/* PROYECTO 3 
+                    {/* PROYECTO 3  */}
                     <div className="project-card-image">
                         <div
                             className="image-container"
-                            style={{ backgroundImage: `url(${require('../assets/projects/laptop-acortador.png')})` }}
+                            style={{ backgroundImage: `url(${require('../assets/projects/laptop-buttonpress.png')})` }}
                         >
                             <div className="project-overlay">
-                                <h3>Acortador URLs</h3>
+                                <h3>ButtonPressGaming</h3>
                                 <div className="tech-icons">
-                                    <img src={require('../assets/tech/html5.png')} alt="HTML" />
-                                    <img src={require('../assets/tech/css3.png')} alt="CSS" />
-                                    <img src={require('../assets/tech/blade.png')} alt="HTML" />
-                                    <img src={require('../assets/tech/laravel.png')} alt="Laravel" />
-                                    <img src={require('../assets/tech/postgre.png')} alt="MySQL" />
+                                    <img src={require('../assets/tech/wordpress.png')} alt="Wordpress" />
                                 </div>
                             </div>
                         </div>
                         <div className="project-description">
-                            <p>Aplicación web en Laravel para acortar URLs. Genera enlaces cortos únicos que redirigen a la URL original. Desplegada en Render usando Docker y PostgreSQL.</p>
+                            <p className="parrafo-portfolio">Web noticias gaming.</p>
                             <div className="project-btns">
-                                <a href="https://acortador-url-18kt.onrender.com/" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                <a href="https://buttonpressgaming.es/" target="_blank" rel="noopener noreferrer" className="p-btn">
                                     <FaLink />
                                 </a>
-                                <a href="https://github.com/PabloDev96/acortador-url" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                <a href="https://github.com/PabloDev96/buttonpressgaming" target="_blank" rel="noopener noreferrer" className="p-btn">
                                     <FaGithub />
                                 </a>
                             </div>
                         </div>
-                    </div> */}  
+                    </div>  
 
                     
 

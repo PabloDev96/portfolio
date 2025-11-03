@@ -3,6 +3,7 @@ import './MarioStyle.css';
 import { FaLink, FaGithub } from "react-icons/fa6";
 import gameboyTaskly from '../assets/projects/gameboy-taskly.png';
 import gameboyRefugio from '../assets/projects/gameboy-pawshelt.png';
+import gameboyButtonPress from '../assets/projects/gameboy-buttonpress.png';
 import gameboyURL from '../assets/projects/gameboy-url.png';
 import htmlIcon from '../assets/tech/html5.png';
 import springIcon from '../assets/tech/spring.png';
@@ -15,6 +16,7 @@ import laravelIcon from '../assets/tech/laravel.png';
 import cssIcon from '../assets/tech/css3.png';
 import mysqlIcon from '../assets/tech/mysql.png';
 import reactIcon from '../assets/tech/react.png';
+import wordpressIcon from '../assets/tech/wordpress.png';
 import { FaArrowUp } from "react-icons/fa";
 
 const projects = [
@@ -36,7 +38,17 @@ const projects = [
       'App para la gestión interna de un refugio de animales. Permite llevar un control eficiente de animales, adopciones, citas y estadísticas con sistema de roles implementado. El objetivo principal es optimizar el trabajo diario de las protectoras, centralizando toda la información en una plataforma intuitiva, accesible y segura.',
     demo: 'https://paw-shelt-frontend.vercel.app/',
     repo: 'https://github.com/PabloDev96/paw-shelt'
-  },  
+  }, 
+  {
+    id: 3,
+    title: 'ButtonPressGaming',
+    image: gameboyButtonPress,
+    tech: [wordpressIcon],
+    description:
+      'Web noticias videojuegos',
+    demo: 'https://buttonpressgaming.es/',
+    repo: 'https://github.com/PabloDev96/buttonpressgaming'
+  }, 
 ];
 
 const Projects = () => {

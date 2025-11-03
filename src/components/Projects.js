@@ -4,6 +4,7 @@ import './Projects.css';
 import { FaLink, FaGithub } from "react-icons/fa6";
 import pcRetroTaskly from '../assets/projects/pcretro-taskly.png';
 import pcRetroRefugio from '../assets/projects/pcretro-pawshelt.png';
+import pcRetroButtonPress from '../assets/projects/pcretroButtonPress.png';
 import pcRetroAcortador from '../assets/projects/pcretro-acortador.png';
 
 import htmlIcon from '../assets/tech/html5.png';
@@ -17,6 +18,7 @@ import laravelIcon from '../assets/tech/laravel.png';
 import cssIcon from '../assets/tech/css3.png';
 import mysqlIcon from '../assets/tech/mysql.png';
 import reactIcon from '../assets/tech/react.png';
+import wordpressIcon from '../assets/tech/wordpress.png';
 import { FaArrowUp } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 
@@ -40,7 +42,17 @@ const projects = [
       'App para la gestión interna de un refugio de animales. Permite llevar un control eficiente de animales, adopciones, citas y estadísticas con sistema de roles implementado. El objetivo principal es optimizar el trabajo diario de las protectoras, centralizando toda la información en una plataforma intuitiva, accesible y segura.',
     demo: 'https://paw-shelt-frontend.vercel.app/',
     repo: 'https://github.com/PabloDev96/paw-shelt'
-  },   
+  },
+  {
+    id: 3,
+    title: 'ButtonPressGaming',
+    image: pcRetroButtonPress,
+    tech: [wordpressIcon],
+    description:
+      'Web noticias videojuegos',
+    demo: 'https://buttonpressgaming.es/',
+    repo: 'https://github.com/PabloDev96/buttonpressgaming'
+  },  
 ];
 
 const Projects = () => {
