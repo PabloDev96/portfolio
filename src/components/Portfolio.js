@@ -146,7 +146,7 @@ const Portfolio = ({ onBack }) => {
                             </div>
                         </div>
                         <div className="project-description">
-                            <p className="parrafo-portfolio">Web noticias gaming.</p>
+                            <p className="parrafo-portfolio">Página Web de noticias gaming. Página creada mediante wordpress, donde emplee tanto el editor de wordpress como elementor, además de emplear Yoast SEO para el posicionamiento.</p>
                             <div className="project-btns">
                                 <a href="https://buttonpressgaming.es/" target="_blank" rel="noopener noreferrer" className="p-btn">
                                     <FaLink />
