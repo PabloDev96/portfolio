@@ -45,7 +45,7 @@ const projects = [
     image: gameboyButtonPress,
     tech: [wordpressIcon],
     description:
-      'Web noticias videojuegos',
+      'Página Web de noticias gaming. Página creada mediante wordpress, donde emplee tanto el editor de wordpress como elementor, además de emplear Yoast SEO para el posicionamiento.',
     demo: 'https://buttonpressgaming.es/',
     repo: 'https://github.com/PabloDev96/buttonpressgaming'
   }, 
