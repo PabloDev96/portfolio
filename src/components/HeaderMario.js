@@ -9,7 +9,7 @@ const Header = () => {
       <div className="header-card-mario">
         <div className="header-content">
           <img
-            src="/img_portfolio.png"
+            src="/img_portfolio.webp"
             alt="Pablo Díaz"
             className="profile-photo-mario"
           />

@@ -58,7 +58,7 @@ const Portfolio = ({ onBack }) => {
 
                 </div>
                 <div className="image-wrapper">
-                    <img src="/img_portfolio.png" alt="Pablo Díaz" />
+                    <img src="/img_portfolio.webp" alt="Pablo Díaz" />
                 </div>
             </section>
 
