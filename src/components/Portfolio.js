@@ -103,7 +103,7 @@ const Portfolio = ({ onBack }) => {
                                 Permite administrar reparaciones, clientes, stock, tickets, proformas, facturas
                                 e informes.<br />
 
-                                User:
+                                User: 
                                 <span
                                     className="copy-tooltip"
                                     data-tooltip={copied === "email" ? "¡Copiado!" : "Copiar"}
@@ -113,7 +113,7 @@ const Portfolio = ({ onBack }) => {
                                 </span>
                                 <br />
 
-                                Pass:
+                                Pass: 
                                 <span
                                     className="copy-tooltip"
                                     data-tooltip={copied === "pass" ? "¡Copiado!" : "Copiar"}
