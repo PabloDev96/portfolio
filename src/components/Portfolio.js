@@ -73,31 +73,35 @@ const Portfolio = ({ onBack }) => {
                 <h2 className="section-label">PROYECTOS</h2>
                 <div className="project-grid">
 
-                    {/*PROYECTO 1*/}
+                    {/* PROYECTO 1 */}
                     <div className="project-card-image">
                         <div
                             className="image-container"
-                            style={{ backgroundImage: `url(${require('../assets/projects/laptop-taskly.png')})` }}
+                            style={{ backgroundImage: `url(${require('../assets/projects/laptop.png')})` }}
                         >
                             <div className="project-overlay">
-                                <h3>Gestor de Tareas - Taskly</h3>
+                                <h3>iSAT</h3>
                                 <div className="tech-icons">
-                                    <img src={require('../assets/tech/html5.png')} alt="HTML" />
-                                    <img src={require('../assets/tech/tailwind.png')} alt="Tailwind" />
-                                    <img src={require('../assets/tech/javascript.png')} alt="JavaScript" />
-                                    <img src={require('../assets/tech/php.png')} alt="PHP" />
-                                    <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
+                                    <img src={require('../assets/tech/react.png')} alt="React" />
+                                    <img src={require('../assets/tech/css3.png')} alt="CSS3" />
+                                    <img src={require('../assets/tech/firebase.png')} alt="Firebase" />
                                 </div>
                             </div>
                         </div>
+
                         <div className="project-description">
-                            <p className="parrafo-portfolio">Proyecto grupal donde desarrollé el backend (APIs para usuarios, proyectos y tareas) e integré con el frontend. La app permite crear y gestionar proyectos y tareas con vista Kanban (drag and drop), login, registro y control de accesos por roles.
+                            <p className="parrafo-portfolio">
+                                Aplicación interna para la gestión completa de un servicio técnico de reparaciones.
+                                Permite administrar reparaciones, clientes, stock, tickets, proformas, facturas
+                                e informes, centralizando toda la información en una plataforma moderna y eficiente.
+                                Desarrollada en React con estilos en CSS y desplegada en Firebase.
                             </p>
+
                             <div className="project-btns">
-                                <a href="https://coral-mule-348004.hostingersite.com/" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                <a href="https://isat-demo.web.app/" target="_blank" rel="noopener noreferrer" className="p-btn">
                                     <FaLink />
                                 </a>
-                                <a href="https://github.com/PabloDev96/GestorDeTareasTaskly" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                <a href="https://isat-demo.web.app/" target="_blank" rel="noopener noreferrer" className="p-btn">
                                     <FaGithub />
                                 </a>
                             </div>
@@ -120,7 +124,10 @@ const Portfolio = ({ onBack }) => {
                             </div>
                         </div>
                         <div className="project-description">
-                            <p className="parrafo-portfolio">App para la gestión interna de un refugio de animales. Permite llevar un control eficiente de animales, adopciones, citas y estadísticas con sistema de roles implementado. El objetivo principal es optimizar el trabajo diario de las protectoras, centralizando toda la información en una plataforma intuitiva, accesible y segura.</p>
+                            <p className="parrafo-portfolio">
+                                App para la gestión interna de un refugio de animales. Permite llevar un control eficiente de animales, adopciones,
+                                citas y estadísticas con sistema de roles implementado.
+                            </p>
                             <div className="project-btns">
                                 <a href="https://paw-shelt-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" className="p-btn">
                                     <FaLink />
@@ -132,7 +139,40 @@ const Portfolio = ({ onBack }) => {
                         </div>
                     </div>
 
-                    {/* PROYECTO 3  */}
+                    {/* PROYECTO 3 */}
+                    <div className="project-card-image">
+                        <div
+                            className="image-container"
+                            style={{ backgroundImage: `url(${require('../assets/projects/laptop-taskly.png')})` }}
+                        >
+                            <div className="project-overlay">
+                                <h3>Gestor de Tareas - Taskly</h3>
+                                <div className="tech-icons">
+                                    <img src={require('../assets/tech/html5.png')} alt="HTML" />
+                                    <img src={require('../assets/tech/tailwind.png')} alt="Tailwind" />
+                                    <img src={require('../assets/tech/javascript.png')} alt="JavaScript" />
+                                    <img src={require('../assets/tech/php.png')} alt="PHP" />
+                                    <img src={require('../assets/tech/mysql.png')} alt="MySQL" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="project-description">
+                            <p className="parrafo-portfolio">
+                                Proyecto grupal donde desarrollé el backend (APIs para usuarios, proyectos y tareas) e integré con el frontend.
+                                La app permite crear y gestionar proyectos y tareas con vista Kanban (drag and drop), login, registro y control de accesos por roles.
+                            </p>
+                            <div className="project-btns">
+                                <a href="https://coral-mule-348004.hostingersite.com/" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                    <FaLink />
+                                </a>
+                                <a href="https://github.com/PabloDev96/GestorDeTareasTaskly" target="_blank" rel="noopener noreferrer" className="p-btn">
+                                    <FaGithub />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* PROYECTO 4 */}
                     <div className="project-card-image">
                         <div
                             className="image-container"
@@ -146,7 +186,10 @@ const Portfolio = ({ onBack }) => {
                             </div>
                         </div>
                         <div className="project-description">
-                            <p className="parrafo-portfolio">Página Web de noticias gaming. Página creada mediante wordpress, donde emplee tanto el editor de wordpress como elementor, además de emplear Yoast SEO para el posicionamiento.</p>
+                            <p className="parrafo-portfolio">
+                                Página Web de noticias gaming creada mediante Wordpress usando Elementor
+                                y optimizada con Yoast SEO.
+                            </p>
                             <div className="project-btns">
                                 <a href="https://buttonpressgaming.es/" target="_blank" rel="noopener noreferrer" className="p-btn">
                                     <FaLink />
@@ -156,11 +199,11 @@ const Portfolio = ({ onBack }) => {
                                 </a>
                             </div>
                         </div>
-                    </div>  
+                    </div>
 
-                    
 
-                    {/* PROYECTO 4
+
+                    {/* PROYECTO 5
                     <div className="project-card-image">
                         <div
                             className="image-container"
@@ -266,7 +309,7 @@ const Portfolio = ({ onBack }) => {
                         <img src={reactLogo} alt="React" />
                         <span>React</span>
                     </div>
-                    <div className="learning-card">                        
+                    <div className="learning-card">
                         <img src={laravelLogo} alt="Laravel" />
                         <span>Laravel</span>
                     </div>

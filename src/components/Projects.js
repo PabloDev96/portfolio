@@ -5,16 +5,15 @@ import { FaLink, FaGithub } from "react-icons/fa6";
 import pcRetroTaskly from '../assets/projects/pcretro-taskly.png';
 import pcRetroRefugio from '../assets/projects/pcretro-pawshelt.png';
 import pcRetroButtonPress from '../assets/projects/pcretroButtonPress.png';
-import pcRetroAcortador from '../assets/projects/pcretro-acortador.png';
+import pcISAT from '../assets/projects/pcretro.png';
 
 import htmlIcon from '../assets/tech/html5.png';
 import springIcon from '../assets/tech/spring.png';
 import tailwindIcon from '../assets/tech/tailwind.png';
 import postgreIcon from '../assets/tech/postgre.png';
-import bladeIcon from '../assets/tech/blade.png';
+import firebaseIcon from '../assets/tech/firebase.png';
 import jsIcon from '../assets/tech/javascript.png';
 import phpIcon from '../assets/tech/php.png';
-import laravelIcon from '../assets/tech/laravel.png';
 import cssIcon from '../assets/tech/css3.png';
 import mysqlIcon from '../assets/tech/mysql.png';
 import reactIcon from '../assets/tech/react.png';
@@ -25,14 +24,15 @@ import { FaArrowLeft } from "react-icons/fa";
 const projects = [
   {
     id: 1,
-    title: 'Taskly',
-    image: pcRetroTaskly,
-    tech: [htmlIcon, tailwindIcon, jsIcon, phpIcon, mysqlIcon],
-    description: `Proyecto grupal donde desarrollé el backend (APIs para usuarios, proyectos y tareas) e integré con el frontend. La app permite crear y gestionar proyectos y tareas con vista Kanban (drag and drop), login, registro y control de accesos por roles.`,
-
-    demo: 'https://coral-mule-348004.hostingersite.com/',
-    repo: 'https://github.com/PabloDev96/GestorDeTareasTaskly'
+    title: 'iSAT',
+    image: pcISAT,
+    tech: [reactIcon, cssIcon, firebaseIcon],
+    description:
+      'Aplicación interna para la gestión completa de un servicio técnico de reparaciones. Permite administrar reparaciones, clientes, stock, tickets, proformas, facturas e informes, centralizando toda la información en una plataforma moderna y eficiente. Desarrollada en React con CSS y desplegada en Firebase.',
+    demo: 'https://isat-demo.web.app/',
+    repo: 'https://isat-demo.web.app/' 
   },
+
   {
     id: 2,
     title: 'PawShelt',
@@ -43,16 +43,28 @@ const projects = [
     demo: 'https://paw-shelt-frontend.vercel.app/',
     repo: 'https://github.com/PabloDev96/paw-shelt'
   },
+
   {
     id: 3,
+    title: 'Taskly',
+    image: pcRetroTaskly,
+    tech: [htmlIcon, tailwindIcon, jsIcon, phpIcon, mysqlIcon],
+    description:
+      'Proyecto grupal donde desarrollé el backend (APIs para usuarios, proyectos y tareas) e integré con el frontend. La app permite crear y gestionar proyectos y tareas con vista Kanban (drag and drop), login, registro y control de accesos por roles.',
+    demo: 'https://coral-mule-348004.hostingersite.com/',
+    repo: 'https://github.com/PabloDev96/GestorDeTareasTaskly'
+  },
+
+  {
+    id: 4,
     title: 'ButtonPressGaming',
     image: pcRetroButtonPress,
     tech: [wordpressIcon],
     description:
-      'Página Web de noticias gaming. Página creada mediante wordpress, donde emplee tanto el editor de wordpress como elementor, además de emplear Yoast SEO para el posicionamiento.',
+      'Página Web de noticias gaming creada mediante Wordpress, utilizando tanto el editor visual como Elementor, y optimizada para SEO usando Yoast.',
     demo: 'https://buttonpressgaming.es/',
     repo: 'https://github.com/PabloDev96/buttonpressgaming'
-  },  
+  }
 ];
 
 const Projects = () => {
