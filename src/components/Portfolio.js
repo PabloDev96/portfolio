@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Portfolio.css';
 import { FaLink } from "react-icons/fa6";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
@@ -22,6 +22,14 @@ import { FaArrowUp } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 
 const Portfolio = ({ onBack }) => {
+
+    const [copied, setCopied] = useState("");
+
+    const copyToClipboard = (text, type) => {
+        navigator.clipboard.writeText(text);
+        setCopied(type);
+        setTimeout(() => setCopied(""), 2000); // Oculta el mensaje tras 2s
+    };
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -91,18 +99,33 @@ const Portfolio = ({ onBack }) => {
 
                         <div className="project-description">
                             <p className="parrafo-portfolio">
-                                Aplicación interna para la gestión completa de un servicio técnico de reparaciones.
+                                Aplicación interna para la gestión de un servicio técnico de reparaciones.
                                 Permite administrar reparaciones, clientes, stock, tickets, proformas, facturas
-                                e informes, centralizando toda la información en una plataforma moderna y eficiente.
-                                Desarrollada en React con estilos en CSS y desplegada en Firebase.
+                                e informes.<br />
+
+                                User:
+                                <span
+                                    className="copy-tooltip"
+                                    data-tooltip={copied === "email" ? "¡Copiado!" : "Copiar"}
+                                    onClick={() => copyToClipboard("demo@isat.com", "email")}
+                                >
+                                    demo@isat.com
+                                </span>
+                                <br />
+
+                                Pass:
+                                <span
+                                    className="copy-tooltip"
+                                    data-tooltip={copied === "pass" ? "¡Copiado!" : "Copiar"}
+                                    onClick={() => copyToClipboard("123456", "pass")}
+                                >
+                                    123456
+                                </span>
                             </p>
 
                             <div className="project-btns">
                                 <a href="https://isat-demo.web.app/" target="_blank" rel="noopener noreferrer" className="p-btn">
                                     <FaLink />
-                                </a>
-                                <a href="https://isat-demo.web.app/" target="_blank" rel="noopener noreferrer" className="p-btn">
-                                    <FaGithub />
                                 </a>
                             </div>
                         </div>
