@@ -109,7 +109,7 @@ const Portfolio = ({ onBack }) => {
                                     data-tooltip={copied === "email" ? "¡Copiado!" : "Copiar"}
                                     onClick={() => copyToClipboard("demo@isat.com", "email")}
                                 >
-                                    demo@isat.com
+                                     demo@isat.com
                                 </span>
                                 <br />
 
@@ -119,7 +119,7 @@ const Portfolio = ({ onBack }) => {
                                     data-tooltip={copied === "pass" ? "¡Copiado!" : "Copiar"}
                                     onClick={() => copyToClipboard("123456", "pass")}
                                 >
-                                    123456
+                                     123456
                                 </span>
                             </p>
 
