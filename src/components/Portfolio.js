@@ -77,7 +77,7 @@ const Portfolio = ({ onBack }) => {
                     <div className="project-card-image">
                         <div
                             className="image-container"
-                            style={{ backgroundImage: `url(${require('../assets/projects/laptop.png')})` }}
+                            style={{ backgroundImage: `url(${require('../assets/projects/laptop-iSAT.png')})` }}
                         >
                             <div className="project-overlay">
                                 <h3>iSAT</h3>
