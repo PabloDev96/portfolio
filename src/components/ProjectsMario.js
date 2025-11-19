@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './MarioStyle.css';
 import { FaLink, FaGithub } from "react-icons/fa6";
 import gameboyTaskly from '../assets/projects/gameboy-taskly.png';
@@ -23,11 +23,11 @@ const projects = [
     id: 1,
     title: 'iSAT',
     image: gameboyISAT,
-    tech: [reactIcon,cssIcon, firebaseIcon],
+    tech: [reactIcon, cssIcon, firebaseIcon],
     description:
       'Aplicación interna para la gestión completa de un servicio técnico de reparaciones. Permite administrar reparaciones, clientes, stock, tickets, proformas, facturas e informes, centralizando toda la información en una plataforma moderna y eficiente. Desarrollada en React con CSS y desplegada en Firebase.',
     demo: 'https://isat-demo.web.app/',
-    repo: 'https://isat-demo.web.app/' 
+    repo: 'https://isat-demo.web.app/'
   },
 
   {
@@ -66,6 +66,15 @@ const projects = [
 
 const Projects = () => {
 
+  const [copied, setCopied] = useState("");
+
+  const copyToClipboard = (text, type) => {
+    navigator.clipboard.writeText(text);
+    setCopied(type);
+    setTimeout(() => setCopied(""), 2000); // Vuelve a "Copiar" en 2s
+  };
+
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -90,6 +99,29 @@ const Projects = () => {
 
               <div className="mario-hover-description">
                 <p>{project.description}</p>
+
+                {project.id === 1 && (
+                  <p className="mario-user-pass">
+                    User:{" "}
+                    <span
+                      className="copy-tooltip"
+                      data-tooltip={copied === "email" ? "¡Copiado!" : "Copiar"}
+                      onClick={() => copyToClipboard("demo@isat.com", "email")}
+                    >
+                      demo@isat.com
+                    </span>
+                    <br />
+                    Pass:{" "}
+                    <span
+                      className="copy-tooltip"
+                      data-tooltip={copied === "pass" ? "¡Copiado!" : "Copiar"}
+                      onClick={() => copyToClipboard("123456", "pass")}
+                    >
+                      123456
+                    </span>
+                  </p>
+                )}
+                
                 <div className="mario-project-buttons">
                   <a href={project.demo} target="_blank" rel="noopener noreferrer" className="mario-project-btn">
                     <FaLink />

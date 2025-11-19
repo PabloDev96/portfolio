@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './About.css'
 import './Projects.css';
 import { FaLink, FaGithub } from "react-icons/fa6";
@@ -30,7 +30,7 @@ const projects = [
     description:
       'Aplicación interna para la gestión completa de un servicio técnico de reparaciones. Permite administrar reparaciones, clientes, stock, tickets, proformas, facturas e informes, centralizando toda la información en una plataforma moderna y eficiente. Desarrollada en React con CSS y desplegada en Firebase.',
     demo: 'https://isat-demo.web.app/',
-    repo: 'https://isat-demo.web.app/' 
+    repo: 'https://isat-demo.web.app/'
   },
 
   {
@@ -69,9 +69,18 @@ const projects = [
 
 const Projects = () => {
 
+  const [copied, setCopied] = useState("");
+
+  const copyToClipboard = (text, type) => {
+    navigator.clipboard.writeText(text);
+    setCopied(type);
+    setTimeout(() => setCopied(""), 2000); // Quita el mensaje en 2s
+  };
+
+
   const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }; 
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <section className="projects-section">
       <h2 className="section-title">Proyectos</h2>
@@ -90,6 +99,27 @@ const Projects = () => {
               </div>
               <div className="project-description">
                 <p>{project.description}</p>
+                {project.id === 1 && (
+                  <p className="user-pass">
+                    User:{" "}
+                    <span
+                      className="copy-tooltip"
+                      data-tooltip={copied === "email" ? "¡Copiado!" : "Copiar"}
+                      onClick={() => copyToClipboard("demo@isat.com", "email")}
+                    >
+                      demo@isat.com
+                    </span>
+                    <br />
+                    Pass:{" "}
+                    <span
+                      className="copy-tooltip"
+                      data-tooltip={copied === "pass" ? "¡Copiado!" : "Copiar"}
+                      onClick={() => copyToClipboard("123456", "pass")}
+                    >
+                      123456
+                    </span>
+                  </p>
+                )}
                 <div className="project-buttons">
                   <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-btn">
                     <FaLink />

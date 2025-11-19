@@ -168,3 +168,36 @@
     top: 18%;
   }
 }
+
+.copy-tooltip {
+  position: relative;
+  cursor: pointer;
+  color: lightblue;
+}
+
+.copy-tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -30px;
+  left: 0;
+  background: #000000cc;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  opacity: 0;
+  transform: translateY(5px);
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.copy-tooltip:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.user-pass {
+  margin-top: 10px;
+  line-height: 1.5;
+}
